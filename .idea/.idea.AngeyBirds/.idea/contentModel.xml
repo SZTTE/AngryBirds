@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\_MK\GameDPM\AngeyBirds" t="IncludeRecursive">
+      <e p="AngeyBirds.sln" t="IncludeFlat" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="classes.cs" t="Include" />
+          <e p="RedBirdScript.cs" t="Include" />
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+    <e p="C:\Users\SZTTE\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\SZTTE\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_AngeyBirds.1201027077.00" t="ExcludeRecursive" />
+  </component>
+</project>
