@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: b9dfbd45fc22c344895d32b17a1c28aa
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - smokeOrigin: {fileID: 8879550923336472564, guid: 48917f69e7dc1c0448bb4fdefc35e946,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

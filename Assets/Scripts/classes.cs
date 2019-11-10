@@ -4,8 +4,9 @@ using UnityEngine;
 
 public abstract  class Entity : MonoBehaviour//实体类
 {
-    private Rigidbody2D _rigidbody2D;
-    private Collider2D _collider2D;
+    protected Rigidbody2D _rigidbody2D;
+    protected Collider2D _collider2D;
+    protected Transform _transform;
     public double Mass
     {
         get => _rigidbody2D.mass;
@@ -14,28 +15,19 @@ public abstract  class Entity : MonoBehaviour//实体类
     {
         get => _rigidbody2D.velocity;
     }
-
-    protected int life;
-    public int Life { get=>life; }
-
-    protected EntityState state;
-    public EntityState State => state;
-
+    protected Tube life;
+    public Tube Life { get=>life; }
+    
+    protected Tube state;
+    public Tube State => state;
     public abstract void Hurt(int damage);
+    protected abstract void Disappear();
 
-    // Start is called before the first frame update
-    void Start()
+    protected void InitializeReferences()//初始化对象引用
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _collider2D = GetComponent<Collider2D>();
-    }
-    
-    
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        _transform = GetComponent<Transform>();
     }
 }
 
@@ -44,11 +36,14 @@ public abstract class Bird : Entity
     public abstract void Skill();
     public override void Hurt(int damage)
     {
-        //待处理
+        life.Now -= damage;
+        state.Now = life.Now / (life.Full / state.Full) + 1;
+        Debug.Log("life now is "+life.Now+"/"+life.Full+",   state now is " + state.Now+"/"+state.Full);
+        if(life.Now<=0) Disappear();
     }
 }
 
-public struct EntityState
+public struct Tube//试管型，储存满状态和当前状态
 {
     public int Full;//满状态是多少？（这由图片数量决定）
     public int Now;//当前状态

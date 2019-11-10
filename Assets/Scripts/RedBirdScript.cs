@@ -6,7 +6,8 @@ public class RedBirdScript : Bird
 {
     public RedBirdScript()
     {
-        life = 1000;
+        life.Full = 1000;
+        life.Now = 1000;
         state.Full = 2;//鸟最健康的时候在第二状态
         state.Now = 2;
     }
@@ -15,17 +16,33 @@ public class RedBirdScript : Bird
     {
         //待完成
     }
-    
+
+    public void Smoke()//由动画启动
+    {
+        SpecialEffectsManager.Instance.Smoke(_transform.position); //这边为什么可以赋给一个vec2的值？
+    }
+
+    protected override void Disappear()
+    {
+        
+    }
+
+    private void DestroyMe()//由动画启动
+    {
+        Destroy(gameObject);
+    }
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        InitializeReferences();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetMouseButtonDown(0))    Hurt(100);
     }
+    
 }
