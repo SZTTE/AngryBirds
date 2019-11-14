@@ -44,5 +44,5 @@ public class RedBirdScript : Bird
     {
         if(Input.GetMouseButtonDown(0))    Hurt(100);
     }
-    
+
 }

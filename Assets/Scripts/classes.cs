@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,6 +29,23 @@ public abstract  class Entity : MonoBehaviour//实体类
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _collider2D = GetComponent<Collider2D>();
         _transform = GetComponent<Transform>();
+    }
+
+    protected void OnCollisionEnter2D(Collision2D other)
+    {
+        /*float x1 = _transform.position.x;
+        float y1 = _transform.position.y;
+        float x2 = other.transform.position.x;
+        float y2 = other.transform.position.y;
+        double theta = Math.Atan( (y1 - y2) / (x1 - x2) );
+        double v1 = y1 * Math.Sin(theta) + x1 * Math.Cos(theta);
+        double v2 = y1 * Math.Sin(theta) + x2 * Math.Cos(theta);
+        double m1 = Mass;
+        double m2 = other.rigidbody.mass;
+        double v1E = ((m1 - m2) * v1 + 2 * m2 * v2) / (m1 + m2);
+        double i = m1 * (v1 - v1E);*/
+        
+        Hurt((int) (other.relativeVelocity.magnitude*other.rigidbody.mass*7.4) );
     }
 }
 
