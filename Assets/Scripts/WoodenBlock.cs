@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,18 +8,22 @@ public class WoodenBlock : Block
     public WoodenBlock()
     {
         BirdSensitivity.Yellow = 1.5f;
+        life.Full = 300;
+        life.Now = 300;
+        state.Full = 4;
+        state.Now = 4;
     }
 
     protected override void Disappear()
     {
-        //待完成
+        Destroy(gameObject);
     }
     
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(BirdSensitivity.Red);
+        InitializeReferences();
     }
 
     // Update is called once per frame

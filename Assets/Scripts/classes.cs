@@ -9,6 +9,7 @@ public abstract  class Entity : MonoBehaviour//实体类
     protected Collider2D _collider2D;
     protected Transform _transform;
     protected Animator _animator;
+
     public double Mass
     {
         get => _rigidbody2D.mass;
@@ -22,7 +23,6 @@ public abstract  class Entity : MonoBehaviour//实体类
 
     protected Tube state;
     public Tube State => state;
-    public abstract void Hurt(int damage);
     protected abstract void Disappear();
 
     protected void InitializeReferences()//初始化对象引用
@@ -32,34 +32,38 @@ public abstract  class Entity : MonoBehaviour//实体类
         _transform = GetComponent<Transform>();
         _animator = GetComponent<Animator>();
     }
+    
 
-    protected void OnCollisionEnter2D(Collision2D other)
+    private void OnMouseDown()//测试
     {
-        ContactPoint2D point  = other.GetContact(0);
-        Hurt((int) point.normalImpulse*50);
+        Debug.Log("my life is "+life.Now);
     }
 }
 
 public abstract class Bird : Entity
 {
     public abstract void Skill();
-    public override void Hurt(int damage)
+
+    protected void OnCollisionEnter2D(Collision2D other)
     {
-        life.Now -= damage;
-        state.Now = life.Now / (life.Full / state.Full) + 1;
-        Debug.Log("life now is "+life.Now+"/"+life.Full+",   state now is " + state.Now+"/"+state.Full);
-        _animator.SetInteger("state",state.Now);
-        if(life.Now<=0) Disappear();
+        _animator.SetBool("flying", false);
     }
 }
 public abstract class Block : Entity
 {
     protected AllBirdsFloat BirdSensitivity;
-    public override void Hurt(int damage)
+    protected void OnCollisionEnter2D(Collision2D other)
     {
+        ContactPoint2D point  = other.GetContact(0);
+        Hurt((int) (point.normalImpulse*10) );
+    }
+    public void Hurt(int damage)
+    {
+        if (damage <= 10) return;
         life.Now -= damage;
         state.Now = life.Now / (life.Full / state.Full) + 1;
-        Debug.Log("life now is "+life.Now+"/"+life.Full+",   state now is " + state.Now+"/"+state.Full);
+        if (state.Now < 1) state.Now = 1;
+        Debug.Log(_animator+";"+gameObject+"life now is "+life.Now+"/"+life.Full+",   state now is " + state.Now+"/"+state.Full);
         _animator.SetInteger("state",state.Now);
         if(life.Now<=0) Disappear();
     }
