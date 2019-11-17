@@ -856,7 +856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a13bc7b82a45ee418bcf55f900fe563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
+  rb: {fileID: 1246096366}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -2015,6 +2015,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5771375023071012558, guid: 481ceff62e1cbc84aaa23aa6ebd94c3b,
     type: 3}
   m_PrefabInstance: {fileID: 1687784761}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1246096366 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9019476597753790247, guid: 5aee77a1fc0b67747a73d14365f32a8e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1489582563}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1348807717
 PrefabInstance:

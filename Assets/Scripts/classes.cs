@@ -9,6 +9,7 @@ public abstract  class Entity : MonoBehaviour//实体类
     protected Collider2D _collider2D;
     protected Transform _transform;
     protected Animator _animator;
+    protected Animator _containerAnimator;
 
     public double Mass
     {
@@ -31,6 +32,7 @@ public abstract  class Entity : MonoBehaviour//实体类
         _collider2D = GetComponent<Collider2D>();
         _transform = GetComponent<Transform>();
         _animator = GetComponent<Animator>();
+        _containerAnimator = GetComponentInParent<Animator>();
     }
     
 
@@ -40,15 +42,50 @@ public abstract  class Entity : MonoBehaviour//实体类
     }
 }
 
+
+
+
+
 public abstract class Bird : Entity
 {
+    protected Transform _anchorTransform;
     protected new void InitializeReferences()//初始化后取消鸟的模拟
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _collider2D = GetComponent<Collider2D>();
         _transform = GetComponent<Transform>();
         _animator = GetComponent<Animator>();
+        _containerAnimator = GetComponentsInParent<Animator>()[1];
+        _anchorTransform = GetComponentsInParent<Transform>()[2];
         _rigidbody2D.simulated = false;
+    }
+
+    public void Jump()
+    {
+        _containerAnimator.SetTrigger("Jump");
+    }
+
+    public void JumpAndRoll()
+    {
+        _containerAnimator.SetTrigger("JumpAndRoll");
+    }
+
+    private IEnumerator Move33TimesIn330ms(Vector3 delta)
+    {
+        for (int i = 0; i < 33; i++)
+        {
+            _anchorTransform.Translate(delta);
+            yield return new WaitForSeconds(0.01f);
+        }
+    }
+
+    public void JumpTo(Vector3 endPosition)//把上面那个函数挂进协程
+    {
+        JumpAndRoll();
+        Vector3 beginPosition = _transform.position;
+        Vector3 disPer10ms = (endPosition-beginPosition)/33;
+        disPer10ms.z = 0;
+        StartCoroutine(Move33TimesIn330ms(disPer10ms));
     }
 
     public abstract void Skill();

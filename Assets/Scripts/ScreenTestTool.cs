@@ -15,10 +15,10 @@ public class ScreenTestTool : MonoBehaviour
     void Update()
     {
         //测试功能
-        /*if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(0))
         {
-            rb.GetComponent<Transform>().position = GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition)+new Vector3(0,0,10);
-            
-        }*/
+            //rb.GetComponent<Transform>().position = GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition)+new Vector3(0,0,10);
+            rb.GetComponent<RedBirdScript>().JumpTo(new Vector3(3,3,3));
+        }
     }
 }
