@@ -42,6 +42,15 @@ public abstract  class Entity : MonoBehaviour//实体类
 
 public abstract class Bird : Entity
 {
+    protected new void InitializeReferences()//初始化后取消鸟的模拟
+    {
+        _rigidbody2D = GetComponent<Rigidbody2D>();
+        _collider2D = GetComponent<Collider2D>();
+        _transform = GetComponent<Transform>();
+        _animator = GetComponent<Animator>();
+        _rigidbody2D.simulated = false;
+    }
+
     public abstract void Skill();
 
     protected void OnCollisionEnter2D(Collision2D other)

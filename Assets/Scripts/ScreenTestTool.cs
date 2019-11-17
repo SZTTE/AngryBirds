@@ -14,10 +14,11 @@ public class ScreenTestTool : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        //测试功能
+        /*if (Input.GetMouseButtonDown(1))
         {
             rb.GetComponent<Transform>().position = GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition)+new Vector3(0,0,10);
             
-        }
+        }*/
     }
 }
