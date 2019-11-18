@@ -9,6 +9,7 @@
           <e p="classes.cs" t="Include" />
           <e p="RedBirdScript.cs" t="Include" />
           <e p="ScreenTestTool.cs" t="Include" />
+          <e p="SlingScript.cs" t="Include" />
           <e p="SmokeScript.cs" t="Include" />
           <e p="SpecialEffectsManager.cs" t="Include" />
           <e p="test.cs" t="Include" />

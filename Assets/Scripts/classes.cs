@@ -36,10 +36,10 @@ public abstract  class Entity : MonoBehaviour//实体类
     }
     
 
-    private void OnMouseDown()//测试
+    /*private void OnMouseDown()//测试
     {
         Debug.Log("my life is "+life.Now);
-    }
+    }*/
 }
 
 
@@ -81,7 +81,8 @@ public abstract class Bird : Entity
 
     public void JumpTo(Vector3 endPosition)//把上面那个函数挂进协程
     {
-        JumpAndRoll();
+        
+        _containerAnimator.SetTrigger("JumpHighAndRoll");
         Vector3 beginPosition = _transform.position;
         Vector3 disPer10ms = (endPosition-beginPosition)/33;
         disPer10ms.z = 0;
@@ -109,7 +110,7 @@ public abstract class Block : Entity
         life.Now -= damage;
         state.Now = life.Now / (life.Full / state.Full) + 1;
         if (state.Now < 1) state.Now = 1;
-        Debug.Log(_animator+";"+gameObject+"life now is "+life.Now+"/"+life.Full+",   state now is " + state.Now+"/"+state.Full);
+        //Debug.Log(_animator+";"+gameObject+"life now is "+life.Now+"/"+life.Full+",   state now is " + state.Now+"/"+state.Full);
         _animator.SetInteger("state",state.Now);
         if(life.Now<=0) Disappear();
     }
