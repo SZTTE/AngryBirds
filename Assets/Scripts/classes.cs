@@ -5,7 +5,7 @@ using UnityEngine;
 
 public abstract  class Entity : MonoBehaviour//实体类
 {
-    protected Rigidbody2D _rigidbody2D;
+    public Rigidbody2D _rigidbody2D;
     protected Collider2D _collider2D;
     protected Transform _transform;
     protected Animator _animator;
@@ -75,6 +75,8 @@ public abstract class Bird : Entity
         for (int i = 0; i < 33; i++)
         {
             _anchorTransform.Translate(delta);
+            //transform.position = Vector3.MoveTowards();
+            //Time.deltaTime
             yield return new WaitForSeconds(0.01f);
         }
     }
@@ -131,7 +133,6 @@ public struct Tube//试管型，储存满状态和当前状态
 {
     public int Full;//满状态是多少？（这由图片数量决定）
     public int Now;//当前状态
-
 }
 
 public struct AllBirdsFloat

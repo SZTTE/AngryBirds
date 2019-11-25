@@ -8,8 +8,8 @@ public class WoodenBlock : Block
     public WoodenBlock()
     {
         BirdSensitivity.Yellow = 1.5f;
-        life.Full = 100;
-        life.Now = 100;
+        life.Full = 50;
+        life.Now = 50;
         state.Full = 4;
         state.Now = 4;
     }
