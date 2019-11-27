@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public abstract  class Entity : MonoBehaviour//实体类
 {
@@ -49,6 +50,7 @@ public abstract  class Entity : MonoBehaviour//实体类
 public abstract class Bird : Entity
 {
     protected Transform _anchorTransform;
+    private bool fired = false;
     protected new void InitializeReferences()//初始化后取消鸟的模拟
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -80,6 +82,12 @@ public abstract class Bird : Entity
             yield return new WaitForSeconds(0.01f);
         }
     }
+    IEnumerator Start()
+    {
+        InitializeReferences();
+        yield return new WaitForSeconds(Random.Range(0.0f,2.0f));
+        _animator.SetTrigger("delayEnds");
+    }
 
     public void JumpTo(Vector3 endPosition)//把上面那个函数挂进协程
     {
@@ -93,9 +101,38 @@ public abstract class Bird : Entity
 
     public abstract void Skill();
 
+    public void Ani_OnSling()
+    {
+        _animator.SetTrigger("onSling");
+    }
+    public void Ani_Fly()
+    {
+        fired = true;
+        _animator.SetBool("flying",true);
+    }
+    public void Ani_HitGround()
+    {
+        _animator.SetBool("flying",false);
+    }
+    public void Ani_Disappear()
+    {
+        _animator.SetTrigger("disappear");
+    }
+
     protected void OnCollisionEnter2D(Collision2D other)
     {
         _animator.SetBool("flying", false);
+    }
+
+    private float _highSpeedLastTime;
+    protected void Update()
+    {
+        if (fired)
+        {
+            if(_rigidbody2D.velocity.magnitude>0.07)_highSpeedLastTime = Time.time;
+            if(Time.time-_highSpeedLastTime>5) Ani_Disappear();
+            //Debug.Log("time now"+Time.time+"low begin"+_highSpeedLastTime);
+        }
     }
 }
 public abstract class Block : Entity

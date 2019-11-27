@@ -41,6 +41,7 @@ public class SlingScript : MonoBehaviour
         birds[_birdNumber.Now].transform.SetParent(holder.transform);
         birds[_birdNumber.Now].transform.eulerAngles = Vector3.zero;
         _state = SlingState.Release;
+        birds[_birdNumber.Now].Ani_OnSling();
     }
 
     /// <summary>
@@ -56,6 +57,7 @@ public class SlingScript : MonoBehaviour
         birds[_birdNumber.Now]._rigidbody2D.velocity = v;
         _state = SlingState.Unloaded;
         birds[_birdNumber.Now].transform.parent = null;
+        birds[_birdNumber.Now].Ani_Fly();
 
         if (_birdNumber.Now < _birdNumber.Full) _birdNumber.Now++;
         else _state = SlingState.OutOfBird;
@@ -70,7 +72,7 @@ public class SlingScript : MonoBehaviour
         {
             yield return new WaitForSeconds(0.5f);
             int n = UnityEngine.Random.Range(0, 10);
-            Debug.Log("state now is  " + _state);
+            //Debug.Log("state now is  " + _state);
             if (n >= _birdNumber.Now && n <= _birdNumber.Full) birds[n].JumpAndRoll();
             if (_state == SlingState.OutOfBird) yield break;
         }

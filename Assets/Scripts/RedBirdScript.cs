@@ -28,13 +28,8 @@ public class RedBirdScript : Bird
         
     }
 
-    private void DestroyMe()//由动画启动
+    private void DestroyMe() //由动画启动
     {
         Destroy(gameObject);
-    }
-
-    void Start()
-    {
-        InitializeReferences();
     }
 }
