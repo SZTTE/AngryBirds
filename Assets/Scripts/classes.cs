@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UIElements;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public abstract  class Entity : MonoBehaviour//实体类
 {
-    public Rigidbody2D _rigidbody2D;
+    [HideInInspector]public Rigidbody2D _rigidbody2D;
     protected Collider2D _collider2D;
     protected Transform _transform;
     protected Animator _animator;
@@ -51,6 +52,9 @@ public abstract class Bird : Entity
 {
     protected Transform _anchorTransform;
     private bool fired = false;
+    [SerializeField] protected Sprite feather1;
+    [SerializeField] protected Sprite feather2;
+    [SerializeField] protected Sprite feather3;
     protected new void InitializeReferences()//初始化后取消鸟的模拟
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();

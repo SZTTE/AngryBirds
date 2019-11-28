@@ -30,6 +30,7 @@ public class RedBirdScript : Bird
 
     private void DestroyMe() //由动画启动
     {
+        SpecialEffectsManager.Instance.Feathers(transform.position,feather1,feather2,feather3);
         Destroy(gameObject);
     }
 }
