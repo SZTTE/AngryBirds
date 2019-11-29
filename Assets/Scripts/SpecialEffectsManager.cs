@@ -5,8 +5,9 @@ using UnityEngine;
 public class SpecialEffectsManager : MonoBehaviour
 {
     public static SpecialEffectsManager Instance;
-    public GameObject smokeOrigin;
-    public GameObject featherGenerators;
+    [SerializeField] private GameObject smokeOrigin;
+    [SerializeField] private GameObject featherGenerators;
+    [SerializeField] private GameObject blockPiecesGenerators;
     /// <summary>
     /// 生成烟雾
     /// </summary>
@@ -27,6 +28,15 @@ public class SpecialEffectsManager : MonoBehaviour
         particle[0].textureSheetAnimation.SetSprite(0,f1);
         particle[1].textureSheetAnimation.SetSprite(0,f2);
         particle[2].textureSheetAnimation.SetSprite(0,f3);
+    }
+    public void BlockPieces(Vector2 position, Sprite p1, Sprite p2, Sprite p3)
+    {
+        GameObject _piecesGenerators =
+            Instantiate(blockPiecesGenerators, new Vector3(position.x, position.y, 0), Quaternion.identity);
+        ParticleSystem[] particle = _piecesGenerators.GetComponentsInChildren<ParticleSystem>();
+        particle[0].textureSheetAnimation.SetSprite(0,p1);
+        particle[1].textureSheetAnimation.SetSprite(0,p2);
+        particle[2].textureSheetAnimation.SetSprite(0,p3);
     }
 
     SpecialEffectsManager()

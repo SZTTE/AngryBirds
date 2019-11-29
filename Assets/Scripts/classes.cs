@@ -52,6 +52,7 @@ public abstract class Bird : Entity
 {
     protected Transform _anchorTransform;
     private bool fired = false;
+    [HideInInspector]public bool haveJumpedToSling = false;
     [SerializeField] protected Sprite feather1;
     [SerializeField] protected Sprite feather2;
     [SerializeField] protected Sprite feather3;
@@ -75,16 +76,18 @@ public abstract class Bird : Entity
     {
         _containerAnimator.SetTrigger("JumpAndRoll");
     }
-
+    
     private IEnumerator Move33TimesIn330ms(Vector3 delta)
     {
+        Vector3 positionBeforeJump = transform.position;
         for (int i = 0; i < 33; i++)
         {
-            _anchorTransform.Translate(delta);
-            //transform.position = Vector3.MoveTowards();
-            //Time.deltaTime
+            positionBeforeJump = positionBeforeJump + delta;
+            transform.position = positionBeforeJump + new Vector3(0,(float)(-0.005*i * (i - 32)),0);
+            transform.Rotate(0f,0f,(float)-360/32);//为什么是32次？
             yield return new WaitForSeconds(0.01f);
         }
+        haveJumpedToSling = true;
     }
     IEnumerator Start()
     {
@@ -95,8 +98,7 @@ public abstract class Bird : Entity
 
     public void JumpTo(Vector3 endPosition)//把上面那个函数挂进协程
     {
-        
-        _containerAnimator.SetTrigger("JumpHighAndRoll");
+        _transform.parent = null;
         Vector3 beginPosition = _transform.position;
         Vector3 disPer10ms = (endPosition-beginPosition)/33;
         disPer10ms.z = 0;
@@ -142,6 +144,9 @@ public abstract class Bird : Entity
 public abstract class Block : Entity
 {
     protected AllBirdsFloat BirdSensitivity;
+    [SerializeField] protected Sprite p1;
+    [SerializeField] protected Sprite p2;
+    [SerializeField] protected Sprite p3;
     protected void OnCollisionEnter2D(Collision2D other)
     {
         ContactPoint2D point  = other.GetContact(0);

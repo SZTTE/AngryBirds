@@ -16,6 +16,7 @@ public class WoodenBlock : Block
 
     protected override void Disappear()
     {
+        SpecialEffectsManager.Instance.BlockPieces(_transform.position, p1, p2, p3);
         Destroy(gameObject);
     }
     

@@ -37,7 +37,10 @@ public class SlingScript : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         birds[_birdNumber.Now].JumpTo(holder.transform.position);
-        yield return new WaitForSeconds(1);
+        while (birds[_birdNumber.Now].haveJumpedToSling)//等待鸟跳上弹弓完成
+        {
+            yield return new WaitForSeconds(0.1f);
+        } 
         birds[_birdNumber.Now].transform.SetParent(holder.transform);
         birds[_birdNumber.Now].transform.eulerAngles = Vector3.zero;
         _state = SlingState.Release;
