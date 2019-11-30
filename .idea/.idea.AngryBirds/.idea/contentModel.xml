@@ -9,6 +9,7 @@
           <e p="CameraScript.cs" t="Include" />
           <e p="classes.cs" t="Include" />
           <e p="HolderScript.cs" t="Include" />
+          <e p="LevelManagerScript.cs" t="Include" />
           <e p="RedBirdScript.cs" t="Include" />
           <e p="ScreenTestTool.cs" t="Include" />
           <e p="SlingScript.cs" t="Include" />

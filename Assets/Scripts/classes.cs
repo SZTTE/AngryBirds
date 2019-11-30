@@ -124,10 +124,14 @@ public abstract class Bird : Entity
     {
         _animator.SetTrigger("disappear");
     }
-
     protected void OnCollisionEnter2D(Collision2D other)
     {
         _animator.SetBool("flying", false);
+    }
+
+    protected void ImStillAlive()
+    {
+        LevelManagerScript.Instance.BirdExist();
     }
 
     private float _highSpeedLastTime;
@@ -139,6 +143,7 @@ public abstract class Bird : Entity
             if(Time.time-_highSpeedLastTime>5) Ani_Disappear();
             //Debug.Log("time now"+Time.time+"low begin"+_highSpeedLastTime);
         }
+        ImStillAlive();
     }
 }
 public abstract class Block : Entity
@@ -163,6 +168,11 @@ public abstract class Block : Entity
         if(life.Now<=0) Disappear();
     }
 
+    private void ImStillMoving()
+    {
+        LevelManagerScript.Instance.BlockMove();
+    }
+
     public Block()
     {
         BirdSensitivity.Black = 1;
@@ -173,6 +183,26 @@ public abstract class Block : Entity
         BirdSensitivity.Yellow = 1;
     }
 
+    private void Update()
+    {
+        ImStillMoving();
+    }
+}
+
+public abstract class Pig : Entity
+{
+    /// <summary>
+    /// 像gamemanager汇报这只猪还活着
+    /// </summary>
+    protected void ImStillAlive()
+    {
+        LevelManagerScript.Instance.PigExist();
+    }
+
+    private void Update()
+    {
+        ImStillAlive();
+    }
 }
 
 public struct Tube//试管型，储存满状态和当前状态
