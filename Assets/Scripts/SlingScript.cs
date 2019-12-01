@@ -18,7 +18,7 @@ public class SlingScript : MonoBehaviour
     private Tube _birdNumber;//鸟的计数器，鸟的编号从零开始
     private SlingState _state;
     public HolderScript holder;
-    public CameraScript camera;
+    public new CameraScript camera;
     public LineRenderer lineBack;
     public LineRenderer lineForward;
     public Transform holderPicTransform;

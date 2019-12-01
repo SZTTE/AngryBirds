@@ -5,13 +5,14 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public abstract  class Entity : MonoBehaviour//实体类
+public abstract class Entity : MonoBehaviour//实体类
 {
     [HideInInspector]public Rigidbody2D _rigidbody2D;
     protected Collider2D _collider2D;
     protected Transform _transform;
     protected Animator _animator;
     protected Animator _containerAnimator;
+    protected SpriteRenderer _spriteRenderer;
 
     public double Mass
     {
@@ -35,6 +36,7 @@ public abstract  class Entity : MonoBehaviour//实体类
         _transform = GetComponent<Transform>();
         _animator = GetComponent<Animator>();
         _containerAnimator = GetComponentInParent<Animator>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
     
 
@@ -43,10 +45,6 @@ public abstract  class Entity : MonoBehaviour//实体类
         Debug.Log("my life is "+life.Now);
     }*/
 }
-
-
-
-
 
 public abstract class Bird : Entity
 {
@@ -84,7 +82,7 @@ public abstract class Bird : Entity
         {
             positionBeforeJump = positionBeforeJump + delta;
             transform.position = positionBeforeJump + new Vector3(0,(float)(-0.005*i * (i - 32)),0);
-            transform.Rotate(0f,0f,(float)-360/32);//为什么是32次？
+            transform.Rotate(0f,0f,-360/32f);//为什么是32次？
             yield return new WaitForSeconds(0.01f);
         }
         haveJumpedToSling = true;
@@ -146,8 +144,10 @@ public abstract class Bird : Entity
         ImStillAlive();
     }
 }
+
 public abstract class Block : Entity
 {
+    [SerializeField] protected List<Sprite> allPics; 
     protected AllBirdsFloat BirdSensitivity;
     [SerializeField] protected Sprite p1;
     [SerializeField] protected Sprite p2;
@@ -163,8 +163,10 @@ public abstract class Block : Entity
         life.Now -= damage;
         state.Now = life.Now / (life.Full / state.Full) + 1;
         if (state.Now < 1) state.Now = 1;
-        //Debug.Log(_animator+";"+gameObject+"life now is "+life.Now+"/"+life.Full+",   state now is " + state.Now+"/"+state.Full);
-        _animator.SetInteger("state",state.Now);
+        if (gameObject.CompareTag("Pig"))
+            Debug.Log(_animator + ";" + gameObject + "life now is " + life.Now + "/" + life.Full + ",   state now is " +
+                      state.Now + "/" + state.Full);
+        _spriteRenderer.sprite = allPics[state.Now - 1];
         if(life.Now<=0) Disappear();
     }
 
@@ -187,9 +189,32 @@ public abstract class Block : Entity
     {
         ImStillMoving();
     }
+
+    /// <summary>
+    /// 初始化变量的值
+    /// </summary>
+    protected void InitializeValue()
+    {
+        state.Full = allPics.Count;
+        state.Now = state.Full;
+    }
+    
+    protected override void Disappear()
+    {
+        SpecialEffectsManager.Instance.BlockPieces(transform.position, p1, p2, p3);
+        Destroy(gameObject);
+        Debug.Log(gameObject);
+
+    }
+
+    private void Start()
+    {
+        InitializeReferences();
+        InitializeValue();
+    }
 }
 
-public abstract class Pig : Entity
+public abstract class Pig : Block
 {
     /// <summary>
     /// 像gamemanager汇报这只猪还活着

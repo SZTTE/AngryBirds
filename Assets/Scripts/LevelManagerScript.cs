@@ -44,11 +44,11 @@ public class LevelManagerScript : MonoBehaviour
         {
             if (Time.time - _lastTimePigExist > 0)     //下面写胜利的代码
             {
-                Debug.Log("You Win");
+                //Debug.Log("You Win");
             }
             else if (Time.time -_lastTimeBirdExist > 3)//下面写失败的代码
             {
-                Debug.Log("You Lose");
+                //Debug.Log("You Lose");
             }
         }
     }
