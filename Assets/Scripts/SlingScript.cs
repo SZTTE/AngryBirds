@@ -38,9 +38,7 @@ public class SlingScript : MonoBehaviour
         yield return new WaitForSeconds(3);
         birds[_birdNumber.Now].JumpTo(holder.transform.position);
         while (birds[_birdNumber.Now].haveJumpedToSling)//等待鸟跳上弹弓完成
-        {
             yield return new WaitForSeconds(0.1f);
-        } 
         birds[_birdNumber.Now].transform.SetParent(holder.transform);
         birds[_birdNumber.Now].transform.eulerAngles = Vector3.zero;
         _state = SlingState.Release;
@@ -54,6 +52,9 @@ public class SlingScript : MonoBehaviour
     /// <param name="intensity">强度，从0到1</param>
     private void Fire(double angle, double intensity)//角度从0到2pi，强度从0到1
     {
+        if(_birdNumber.Now!=0)
+            birds[_birdNumber.Now-1].DeleteTrait();
+        TrailScript.Instance.StartDrawing(birds[_birdNumber.Now].transform);
         birds[_birdNumber.Now]._rigidbody2D.simulated = true;
         double speed = 15;
         Vector2 v = new Vector2( (float) (speed*Math.Cos(angle)*intensity) , (float) (speed*Math.Sin(angle)*intensity));

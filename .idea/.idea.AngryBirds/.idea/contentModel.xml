@@ -19,6 +19,7 @@
           <e p="SmokeScript.cs" t="Include" />
           <e p="SpecialEffectsManager.cs" t="Include" />
           <e p="test.cs" t="Include" />
+          <e p="TrailScript.cs" t="Include" />
           <e p="WoodenBlock.cs" t="Include" />
         </e>
       </e>

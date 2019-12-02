@@ -13,6 +13,7 @@ public abstract class Entity : MonoBehaviour//实体类
     protected Animator _animator;
     protected Animator _containerAnimator;
     protected SpriteRenderer _spriteRenderer;
+    protected TrailRenderer _trailRenderer;
 
     public double Mass
     {
@@ -49,7 +50,8 @@ public abstract class Entity : MonoBehaviour//实体类
 public abstract class Bird : Entity
 {
     protected Transform _anchorTransform;
-    private bool fired = false;
+    protected bool fired = false;
+    protected bool hit = false;
     [HideInInspector]public bool haveJumpedToSling = false;
     [SerializeField] protected Sprite feather1;
     [SerializeField] protected Sprite feather2;
@@ -62,19 +64,17 @@ public abstract class Bird : Entity
         _animator = GetComponent<Animator>();
         _containerAnimator = GetComponentsInParent<Animator>()[1];
         _anchorTransform = GetComponentsInParent<Transform>()[2];
+        _trailRenderer = GetComponent<TrailRenderer>();
         _rigidbody2D.simulated = false;
     }
-
     public void Jump()
     {
         _containerAnimator.SetTrigger("Jump");
     }
-
     public void JumpAndRoll()
     {
         _containerAnimator.SetTrigger("JumpAndRoll");
     }
-    
     private IEnumerator Move33TimesIn330ms(Vector3 delta)
     {
         Vector3 positionBeforeJump = transform.position;
@@ -90,10 +90,10 @@ public abstract class Bird : Entity
     IEnumerator Start()
     {
         InitializeReferences();
+        _trailRenderer.emitting = false;
         yield return new WaitForSeconds(Random.Range(0.0f,2.0f));
         _animator.SetTrigger("delayEnds");
     }
-
     public void JumpTo(Vector3 endPosition)//把上面那个函数挂进协程
     {
         _transform.parent = null;
@@ -102,9 +102,7 @@ public abstract class Bird : Entity
         disPer10ms.z = 0;
         StartCoroutine(Move33TimesIn330ms(disPer10ms));
     }
-
     public abstract void Skill();
-
     public void Ani_OnSling()
     {
         _animator.SetTrigger("onSling");
@@ -125,11 +123,24 @@ public abstract class Bird : Entity
     protected void OnCollisionEnter2D(Collision2D other)
     {
         _animator.SetBool("flying", false);
+        if (!hit)
+        {
+            TrailScript.Instance.StopDrawing();
+            hit = true;
+        }
     }
-
     protected void ImStillAlive()
     {
         LevelManagerScript.Instance.BirdExist();
+    }
+    protected void DestroyMe() //由动画启动
+    {
+        SpecialEffectsManager.Instance.Feathers(transform.position,feather1,feather2,feather3);
+        Destroy(gameObject);
+    }
+    public void DeleteTrait()
+    {
+        TrailScript.Instance.Clear();
     }
 
     private float _highSpeedLastTime;
@@ -164,8 +175,8 @@ public abstract class Block : Entity
         state.Now = life.Now / (life.Full / state.Full) + 1;
         if (state.Now < 1) state.Now = 1;
         if (gameObject.CompareTag("Pig"))
-            Debug.Log(_animator + ";" + gameObject + "life now is " + life.Now + "/" + life.Full + ",   state now is " +
-                      state.Now + "/" + state.Full);
+            //Debug.Log(_animator + ";" + gameObject + "life now is " + life.Now + "/" + life.Full + ",   state now is " +
+                      //state.Now + "/" + state.Full);
         _spriteRenderer.sprite = allPics[state.Now - 1];
         if(life.Now<=0) Disappear();
     }
@@ -203,7 +214,7 @@ public abstract class Block : Entity
     {
         SpecialEffectsManager.Instance.BlockPieces(transform.position, p1, p2, p3);
         Destroy(gameObject);
-        Debug.Log(gameObject);
+        //Debug.Log(gameObject);
 
     }
 
@@ -223,7 +234,6 @@ public abstract class Pig : Block
     {
         LevelManagerScript.Instance.PigExist();
     }
-
     private void Update()
     {
         ImStillAlive();
