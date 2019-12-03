@@ -214,7 +214,6 @@ public abstract class Block : Entity
     {
         SpecialEffectsManager.Instance.BlockPieces(transform.position, p1, p2, p3);
         Destroy(gameObject);
-        //Debug.Log(gameObject);
 
     }
 
