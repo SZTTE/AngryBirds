@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PasingPic : MonoBehaviour
 {
@@ -27,4 +28,6 @@ public class PasingPic : MonoBehaviour
         }
         //if(transform.position.x<-20) Destroy(gameObject);
     }
+
+    
 }
