@@ -119,7 +119,7 @@ public class SlingScript : MonoBehaviour
         case SlingState.Stretched://紧绷状态
         {
             //设置transform
-            targetPosition = transform.TransformPoint(    new Vector3((float) (  lineLength*Math.Cos(theta) ),(float)( lineLength*Math.Sin(theta) ),10)    );
+            targetPosition = transform.TransformPoint(    new Vector3((float) (  lineLength*Math.Cos(theta) ),(float)( lineLength*Math.Sin(theta) ),-101)    );
             holder.transform.eulerAngles = new Vector3(0,0,(float) (theta/ (2*Math.PI) * 360 - 180) );
             holder.transform.position = targetPosition;
             
@@ -139,7 +139,7 @@ public class SlingScript : MonoBehaviour
         }
         case SlingState.Release:
         {
-            holder.transform.position = transform.TransformPoint(Vector3.zero);
+            holder.transform.localPosition = new Vector3(0,0,-101);
             holder.transform.eulerAngles = Vector3.zero;
             if (lineLongEnough)
             {

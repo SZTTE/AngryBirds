@@ -32,8 +32,8 @@ public class TrailScript : MonoBehaviour
         StopCoroutine(_drawCoroutine);
         _trailRenderer.emitting = false;
         _trailRenderer.GetPositions(_positions);
-        int finalVec = 0;
-        for (int i = 0; i < 1000; i++)
+        int finalVec = _trailRenderer.positionCount;
+        /*for (int i = 0; i < 1000; i++)
             if (_positions[i] == Vector3.zero)
             {
                 finalVec = i - 5;
@@ -44,12 +44,18 @@ public class TrailScript : MonoBehaviour
         {
             goodPositions[i] = _positions[i];
         }
-        _trailRenderer.SetPositions(goodPositions);
-        for (int i = 0; i < 1000; i++)
+        _trailRenderer.SetPositions(goodPositions);*/
+        
+        /*Debug.Log(finalVec);
+        Vector3 pre3 = _trailRenderer.GetPosition(finalVec - 10);
+        _trailRenderer.SetPosition(finalVec-1,pre3);
+        _trailRenderer.SetPosition(finalVec-2,pre3);*/
+        
+        /*for (int i = 0; i < 100; i++)
             Debug.Log(_positions[i]);
         _trailRenderer.GetPositions(_positions);
-        for (int i = 0; i < 1000; i++)
-            Debug.Log(_positions[i]);
+        for (int i = 0; i < 100; i++)
+            Debug.Log(_positions[i]);*/
     }
 
     public void Clear()
