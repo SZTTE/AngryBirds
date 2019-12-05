@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     private bool _mute;
+    private Tube _level;
+    public int[] highestScore = {0};
+    public Tube Level { get=>_level; }
 
 
     public void MuteSwitch()
@@ -17,6 +20,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        _level.Full = 5;
+        _level.Now = 1;
         _mute = false;
         if (Instance == null)   Instance = this;
         else                    Destroy(gameObject);
@@ -31,4 +36,10 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("Title");
     }
+
+    public void GotoLevelSelectScene()
+    {
+        SceneManager.LoadScene("LevelSelect");
+    }
+
 }

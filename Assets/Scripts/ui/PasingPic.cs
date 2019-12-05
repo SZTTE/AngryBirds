@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class PasingPic : MonoBehaviour
 {
-    [SerializeField]private float width;
-    [SerializeField]private float speed;
-    [SerializeField] private int sum;
+    [SerializeField]private float width = 0;
+    [SerializeField]private float speed = 0;
+    //[SerializeField] private int sum = 0;
     private Rigidbody2D _rigidbody;
 
     private bool haveCopied = false;

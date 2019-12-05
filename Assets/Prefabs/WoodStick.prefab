@@ -49,10 +49,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidbody2D: {fileID: 0}
   allPics:
-  - {fileID: 21300000, guid: 67cad9145809aa14f99d722fe087444d, type: 3}
-  - {fileID: 21300000, guid: bd15286041879354fa20938c915fc582, type: 3}
-  - {fileID: 21300000, guid: 44fd6e49bb4a4cc4ebba90849b818dc4, type: 3}
   - {fileID: 21300000, guid: 1ac8b7e6f8d25374eb20fa6f9a8215c8, type: 3}
+  - {fileID: 21300000, guid: 44fd6e49bb4a4cc4ebba90849b818dc4, type: 3}
+  - {fileID: 21300000, guid: bd15286041879354fa20938c915fc582, type: 3}
+  - {fileID: 21300000, guid: 67cad9145809aa14f99d722fe087444d, type: 3}
   p1: {fileID: 21300000, guid: be27bc04c791a6b4c84940eb306dffca, type: 3}
   p2: {fileID: 21300000, guid: 76de930f3686c634fb0068b8acca7a75, type: 3}
   p3: {fileID: 21300000, guid: 8d186862d2d73ea48888795401658b7e, type: 3}

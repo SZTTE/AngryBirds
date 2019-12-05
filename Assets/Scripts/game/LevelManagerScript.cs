@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelManagerScript : MonoBehaviour
 {
@@ -8,6 +9,11 @@ public class LevelManagerScript : MonoBehaviour
     private float _lastTimePigExist;
     private float _lastTimeBirdExist;
     private float _lastTimeBlockMove;
+    private int _score = 0;
+    public int Score => _score;
+    public int level = 0;
+    [SerializeField] private Text scoreBox;
+
 
     public LevelManagerScript()
     {
@@ -15,6 +21,16 @@ public class LevelManagerScript : MonoBehaviour
             Instance = this;
         else
             Destroy(gameObject);
+    }
+
+    /// <summary>
+    /// 加分
+    /// </summary>
+    /// <param name="scoreToAdd">要加多少分？</param>
+    public void ScoreAdd(int scoreToAdd)
+    {
+        _score += scoreToAdd;
+        scoreBox.text = _score.ToString();
     }
 
     /// <summary>

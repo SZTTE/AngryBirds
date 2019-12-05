@@ -5,9 +5,9 @@ using UnityEngine;
 public class SpecialEffectsManager : MonoBehaviour
 {
     public static SpecialEffectsManager Instance;
-    [SerializeField] private GameObject smokeOrigin;
-    [SerializeField] private GameObject featherGenerators;
-    [SerializeField] private GameObject blockPiecesGenerators;
+    [SerializeField] private GameObject smokeOrigin = null;
+    [SerializeField] private GameObject featherGenerators = null;
+    [SerializeField] private GameObject blockPiecesGenerators = null;
     /// <summary>
     /// 生成烟雾
     /// </summary>

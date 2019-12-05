@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class MuteButtonScript : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer stopPic;
-    [SerializeField] private bool isPig;
+    [SerializeField] private SpriteRenderer stopPic = null;
+    [SerializeField] private bool isPig = false;
     private void OnMouseDown()
     {
         if(!isPig)
