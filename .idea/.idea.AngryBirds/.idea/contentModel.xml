@@ -25,6 +25,7 @@
             <e p="WoodenBlock.cs" t="Include" />
           </e>
           <e p="ui" t="Include">
+            <e p="Destroy.cs" t="Include" />
             <e p="LevelSelectSceneManager.cs" t="Include" />
             <e p="MuteButtonScript.cs" t="Include" />
             <e p="PasingPic.cs" t="Include" />
