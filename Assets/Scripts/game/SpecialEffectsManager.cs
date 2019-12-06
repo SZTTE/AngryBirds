@@ -8,6 +8,7 @@ public class SpecialEffectsManager : MonoBehaviour
     [SerializeField] private GameObject smokeOrigin = null;
     [SerializeField] private GameObject featherGenerators = null;
     [SerializeField] private GameObject blockPiecesGenerators = null;
+    [SerializeField] private GameObject scoreJumpOrigin = null;
     /// <summary>
     /// 生成烟雾
     /// </summary>
@@ -37,6 +38,14 @@ public class SpecialEffectsManager : MonoBehaviour
         particle[0].textureSheetAnimation.SetSprite(0,p1);
         particle[1].textureSheetAnimation.SetSprite(0,p2);
         particle[2].textureSheetAnimation.SetSprite(0,p3);
+    }
+    public void Score(Vector2 position, Sprite scorePic)
+    {
+        GameObject scoreBox =
+            Instantiate(scoreJumpOrigin, new Vector3(position.x, position.y, 0), Quaternion.identity);
+        scoreBox.GetComponentInChildren<SpriteRenderer>().sprite = scorePic;
+/*        //scoreBox.GetComponentInChildren<SpriteRenderer>().sprite = null;
+        Debug.Log(scoreBox.GetComponentInChildren<SpriteRenderer>());*/
     }
 
     SpecialEffectsManager()

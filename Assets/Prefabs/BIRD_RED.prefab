@@ -139,6 +139,8 @@ MonoBehaviour:
   feather1: {fileID: 21300000, guid: 5c287a0e3f4514447aa1fd9e0c765357, type: 3}
   feather2: {fileID: 21300000, guid: 457cc395286e6b74a8f072d58df37459, type: 3}
   feather3: {fileID: 21300000, guid: e662e7c64f6f29c48a9a40f1d00be394, type: 3}
+  myScorePic: {fileID: 4722777881887850919, guid: bad0419d5085de84cbaf1971557bbf0a,
+    type: 3}
 --- !u!95 &9019476597753790253
 Animator:
   serializedVersion: 3

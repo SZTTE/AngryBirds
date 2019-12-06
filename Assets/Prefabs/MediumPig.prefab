@@ -140,3 +140,5 @@ MonoBehaviour:
   p1: {fileID: 21300000, guid: 2fad3b5f5c628af4c80156c34d9916a4, type: 3}
   p2: {fileID: 21300000, guid: 2fad3b5f5c628af4c80156c34d9916a4, type: 3}
   p3: {fileID: 21300000, guid: 2fad3b5f5c628af4c80156c34d9916a4, type: 3}
+  myScorePic: {fileID: 0}
+  myScore: 5000

@@ -19,7 +19,8 @@ public class ScreenTestTool : MonoBehaviour
         {
             //rb.GetComponent<Transform>().position = GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition)+new Vector3(0,0,10);
             //rb.GetComponent<RedBirdScript>().JumpTo(new Vector3(3,3,3));
-            SettlementCanvasScript.Instance.Appear(3500);
+            //SettlementCanvasScript.Instance.Appear(3500);
+            //SpecialEffectsManager.Instance.Score(new Vector2(0,0),null );
         }
     }
 }

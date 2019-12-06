@@ -56,6 +56,7 @@ public abstract class Bird : Entity
     [SerializeField] protected Sprite feather1;
     [SerializeField] protected Sprite feather2;
     [SerializeField] protected Sprite feather3;
+    [SerializeField] protected Sprite myScorePic;
     protected new void InitializeReferences()//初始化后取消鸟的模拟
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -142,6 +143,11 @@ public abstract class Bird : Entity
     {
         TrailScript.Instance.Clear();
     }
+    public void ShouMyScore()
+    {
+        SpecialEffectsManager.Instance.Score(transform.position+Vector3.up*0.5f, myScorePic);
+        LevelManagerScript.Instance.ScoreAdd(10000);
+    }
 
     private float _highSpeedLastTime;
     protected void Update()
@@ -199,7 +205,10 @@ public abstract class Block : Entity
 
     private void Update()
     {
-        ImStillMoving();
+        if (_rigidbody2D.velocity.magnitude >= 0.1f)
+        {
+            ImStillMoving();
+        }
     }
 
     /// <summary>
@@ -227,7 +236,9 @@ public abstract class Block : Entity
 
 public abstract class Pig : Block
 {
-    /// <summary>
+    [SerializeField] private Sprite myScorePic = null;
+    [SerializeField] private int myScore = 0;
+     /// <summary>
     /// 像gamemanager汇报这只猪还活着
     /// </summary>
     protected void ImStillAlive()
@@ -237,6 +248,15 @@ public abstract class Pig : Block
     private void Update()
     {
         ImStillAlive();
+    }
+
+    protected override void Disappear()
+    {
+        
+        SpecialEffectsManager.Instance.BlockPieces(transform.position, p1, p2, p3);
+        SpecialEffectsManager.Instance.Score(transform.position,myScorePic);
+        LevelManagerScript.Instance.ScoreAdd(myScore);
+        Destroy(gameObject);
     }
 }
 

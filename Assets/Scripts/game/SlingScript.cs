@@ -13,6 +13,7 @@ public enum SlingState
 };
 public class SlingScript : MonoBehaviour
 {
+    public static SlingScript Instance;
     private Transform _transform;
     public List<Bird> birds;
     private Tube _birdNumber;//鸟的计数器，鸟的编号从零开始
@@ -25,6 +26,11 @@ public class SlingScript : MonoBehaviour
     public SlingState State
     {
         get => _state;
+    }
+
+    SlingScript()
+    {
+        Instance = this;
     }
 
 
@@ -43,6 +49,18 @@ public class SlingScript : MonoBehaviour
         birds[_birdNumber.Now].transform.eulerAngles = Vector3.zero;
         _state = SlingState.Release;
         birds[_birdNumber.Now].Ani_OnSling();
+    }
+
+    public IEnumerator ShowBirdsScore()
+    {
+        while (_birdNumber.Now <= _birdNumber.Full)
+        {
+            birds[_birdNumber.Now].ShouMyScore();
+            birds[_birdNumber.Now].JumpAndRoll();
+            yield return new WaitForSeconds(1.8f);
+            _birdNumber.Now++;
+        }
+        SettlementCanvasScript.Instance.Appear(LevelManagerScript.Instance.Score);
     }
 
     /// <summary>

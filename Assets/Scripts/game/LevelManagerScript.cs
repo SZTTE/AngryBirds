@@ -12,7 +12,7 @@ public class LevelManagerScript : MonoBehaviour
     private int _score = 0;
     public int Score => _score;
     public int level = 0;
-    [SerializeField] private Text scoreBox;
+    [SerializeField] private Text scoreBox = null;
 
 
     public LevelManagerScript()
@@ -54,18 +54,22 @@ public class LevelManagerScript : MonoBehaviour
         _lastTimeBlockMove = Time.time;
     }
 
+    private bool _settled = false;//胜负已分
     void Update()
     {
-        if (Time.time - _lastTimeBlockMove > 3)        //在块都静止之后才判定胜负
+        if (Time.time - _lastTimeBlockMove > 3&& !_settled)        //在块都静止之后才判定胜负
         {
             if (Time.time - _lastTimePigExist > 0)     //下面写胜利的代码
             {
-                //Debug.Log("You Win");
+                StartCoroutine(SlingScript.Instance.ShowBirdsScore());
+                _settled = true;
             }
             else if (Time.time -_lastTimeBirdExist > 3)//下面写失败的代码
             {
                 //Debug.Log("You Lose");
             }
         }
+
+        Debug.Log("time="+Time.time+",_Block="+_lastTimeBlockMove);
     }
 }
