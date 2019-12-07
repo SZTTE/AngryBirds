@@ -70,6 +70,6 @@ public class LevelManagerScript : MonoBehaviour
             }
         }
 
-        Debug.Log("time="+Time.time+",_Block="+_lastTimeBlockMove);
+        //Debug.Log("time="+Time.time+",_Block="+_lastTimeBlockMove);
     }
 }

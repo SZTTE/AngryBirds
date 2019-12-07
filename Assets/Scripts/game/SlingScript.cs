@@ -9,7 +9,7 @@ using Random = System.Random;
 
 public enum SlingState
 {
-    Stretched,Release,Unloaded,OutOfBird,Loading
+    Stretched,Release,Unloaded,OutOfBird,Loading,End
 };
 public class SlingScript : MonoBehaviour
 {
@@ -27,7 +27,7 @@ public class SlingScript : MonoBehaviour
     {
         get => _state;
     }
-
+    private IEnumerator _reloadCor;
     SlingScript()
     {
         Instance = this;
@@ -53,6 +53,7 @@ public class SlingScript : MonoBehaviour
 
     public IEnumerator ShowBirdsScore()
     {
+        _state = SlingState.End;
         while (_birdNumber.Now <= _birdNumber.Full)
         {
             birds[_birdNumber.Now].ShouMyScore();
@@ -151,7 +152,8 @@ public class SlingScript : MonoBehaviour
         }
         case SlingState.Unloaded:
         {
-            StartCoroutine(Reload());
+            _reloadCor = Reload();
+            StartCoroutine(_reloadCor);
             _state = SlingState.Loading;
             break;
         }
@@ -164,6 +166,11 @@ public class SlingScript : MonoBehaviour
                 Fire(theta - Math.PI, lineLength / _maxLength);
                 lineLongEnough = false;
             }
+            break;
+        }
+        case SlingState.End:
+        {
+            StopCoroutine(_reloadCor);
             break;
         }
         default:

@@ -14,6 +14,7 @@ public abstract class Entity : MonoBehaviour//实体类
     protected Animator _containerAnimator;
     protected SpriteRenderer _spriteRenderer;
     protected TrailRenderer _trailRenderer;
+    protected AudioSource _audioSource;
 
     public double Mass
     {
@@ -38,6 +39,7 @@ public abstract class Entity : MonoBehaviour//实体类
         _animator = GetComponent<Animator>();
         _containerAnimator = GetComponentInParent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _audioSource = GetComponent<AudioSource>();
     }
     
 
@@ -57,6 +59,8 @@ public abstract class Bird : Entity
     [SerializeField] protected Sprite feather2;
     [SerializeField] protected Sprite feather3;
     [SerializeField] protected Sprite myScorePic;
+    [SerializeField] protected AudioClip fireSound;
+    [SerializeField] protected AudioClip hitSound;
     protected new void InitializeReferences()//初始化后取消鸟的模拟
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -66,6 +70,7 @@ public abstract class Bird : Entity
         _containerAnimator = GetComponentsInParent<Animator>()[1];
         _anchorTransform = GetComponentsInParent<Transform>()[2];
         _trailRenderer = GetComponent<TrailRenderer>();
+        _audioSource = GetComponentInChildren<AudioSource>();
         _rigidbody2D.simulated = false;
     }
     public void Jump()
@@ -112,6 +117,7 @@ public abstract class Bird : Entity
     {
         fired = true;
         _animator.SetBool("flying",true);
+        _audioSource.PlayOneShot(fireSound,1);
     }
     public void Ani_HitGround()
     {
@@ -128,6 +134,7 @@ public abstract class Bird : Entity
         {
             TrailScript.Instance.StopDrawing();
             hit = true;
+            _audioSource.PlayOneShot(hitSound,1);
         }
     }
     protected void ImStillAlive()
@@ -169,10 +176,29 @@ public abstract class Block : Entity
     [SerializeField] protected Sprite p1;
     [SerializeField] protected Sprite p2;
     [SerializeField] protected Sprite p3;
+    [SerializeField] protected AudioClip[] destroySound;
+    [SerializeField] protected AudioClip[] collisionSound;
+    protected AudioClip UsedCollisionSound;
+    protected AudioClip UsedDestroySound;
+    
+
     protected void OnCollisionEnter2D(Collision2D other)
     {
         ContactPoint2D point  = other.GetContact(0);
+        if(!_audioSource.isPlaying && _audioSource.enabled)    _audioSource.PlayOneShot(UsedCollisionSound,0.3f);
         Hurt((int) (point.normalImpulse*10) );
+    }
+    protected new void InitializeReferences()//初始化对象引用
+    {
+        _rigidbody2D = GetComponent<Rigidbody2D>();
+        _collider2D = GetComponent<Collider2D>();
+        _transform = GetComponent<Transform>();
+        _animator = GetComponent<Animator>();
+        _containerAnimator = GetComponentInParent<Animator>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _audioSource = GetComponent<AudioSource>();
+        UsedCollisionSound = collisionSound[Random.Range(0, collisionSound.Length - 1)];
+        UsedDestroySound = destroySound[Random.Range(0, destroySound.Length - 1)];
     }
     public void Hurt(int damage)
     {
@@ -222,7 +248,7 @@ public abstract class Block : Entity
     
     protected override void Disappear()
     {
-        SpecialEffectsManager.Instance.BlockPieces(transform.position, p1, p2, p3);
+        SpecialEffectsManager.Instance.BlockPieces(transform.position, p1, p2, p3,UsedDestroySound);
         Destroy(gameObject);
 
     }
@@ -245,15 +271,21 @@ public abstract class Pig : Block
     {
         LevelManagerScript.Instance.PigExist();
     }
-    private void Update()
+     private void Update()
     {
         ImStillAlive();
     }
+     protected new void OnCollisionEnter2D(Collision2D other)
+     {
+         ContactPoint2D point = other.GetContact(0);
+         if(!_audioSource.isPlaying)    _audioSource.PlayOneShot(UsedCollisionSound);
+         Hurt((int) (point.normalImpulse*10) );
+     }
 
     protected override void Disappear()
     {
         
-        SpecialEffectsManager.Instance.BlockPieces(transform.position, p1, p2, p3);
+        SpecialEffectsManager.Instance.BlockPieces(transform.position, p1, p2, p3,UsedDestroySound);
         SpecialEffectsManager.Instance.Score(transform.position,myScorePic);
         LevelManagerScript.Instance.ScoreAdd(myScore);
         Destroy(gameObject);

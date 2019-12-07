@@ -7,6 +7,7 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="game" t="Include">
+            <e p="AudioManager.cs" t="Include" />
             <e p="BigPigScript.cs" t="Include" />
             <e p="CameraScript.cs" t="Include" />
             <e p="classes.cs" t="Include" />
@@ -21,6 +22,7 @@
             <e p="SmokeScript.cs" t="Include" />
             <e p="SpecialEffectsManager.cs" t="Include" />
             <e p="test.cs" t="Include" />
+            <e p="TitleManager.cs" t="Include" />
             <e p="TrailScript.cs" t="Include" />
             <e p="WoodenBlock.cs" t="Include" />
           </e>

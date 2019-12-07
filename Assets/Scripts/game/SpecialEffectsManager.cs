@@ -30,7 +30,7 @@ public class SpecialEffectsManager : MonoBehaviour
         particle[1].textureSheetAnimation.SetSprite(0,f2);
         particle[2].textureSheetAnimation.SetSprite(0,f3);
     }
-    public void BlockPieces(Vector2 position, Sprite p1, Sprite p2, Sprite p3)
+    public void BlockPieces(Vector2 position, Sprite p1, Sprite p2, Sprite p3,AudioClip sound)
     {
         GameObject _piecesGenerators =
             Instantiate(blockPiecesGenerators, new Vector3(position.x, position.y, 0), Quaternion.identity);
@@ -38,6 +38,8 @@ public class SpecialEffectsManager : MonoBehaviour
         particle[0].textureSheetAnimation.SetSprite(0,p1);
         particle[1].textureSheetAnimation.SetSprite(0,p2);
         particle[2].textureSheetAnimation.SetSprite(0,p3);
+        AudioSource _audioSource = gameObject.AddComponent<AudioSource>();
+        _audioSource.PlayOneShot(sound,0.3f);
     }
     public void Score(Vector2 position, Sprite scorePic)
     {

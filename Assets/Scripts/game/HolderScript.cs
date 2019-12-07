@@ -7,22 +7,13 @@ public class HolderScript : MonoBehaviour
 {
     public bool draging = false;
     public MonoBehaviour slingScript;
-    //private tran
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private AudioClip stretchSound;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnMouseDown()
     {
         draging = true;
+        AudioManager.Instance.Play(stretchSound,1);
     }
 
     private void OnMouseUp()

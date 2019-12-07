@@ -12,8 +12,6 @@ public class MuteButtonScript : MonoBehaviour
         if (!isPig)
         {
             GameManager.Instance.MuteSwitch();
-            AudioListener _audioListener = GameObject.Find("Main Camera").GetComponent<AudioListener>();
-            _audioListener.enabled = !_audioListener.enabled;
         }
         stopPic.enabled = !stopPic.enabled;
     }
