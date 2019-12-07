@@ -14,15 +14,6 @@ public class LevelManagerScript : MonoBehaviour
     public int level = 0;
     [SerializeField] private Text scoreBox = null;
 
-
-    public LevelManagerScript()
-    {
-        if (Instance == null)
-            Instance = this;
-        else
-            Destroy(gameObject);
-    }
-
     /// <summary>
     /// 加分
     /// </summary>
@@ -55,8 +46,22 @@ public class LevelManagerScript : MonoBehaviour
     }
 
     private bool _settled = false;//胜负已分
+
+    void Start()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    
+        _lastTimePigExist = Time.time;
+        _lastTimeBirdExist = Time.time;
+        _lastTimeBlockMove = Time.time;
+        _score = 0;
+    }
     void Update()
     {
+        Debug.Log(_lastTimeBirdExist);
         if (Time.time - _lastTimeBlockMove > 3&& !_settled)        //在块都静止之后才判定胜负
         {
             if (Time.time - _lastTimePigExist > 0)     //下面写胜利的代码
@@ -66,7 +71,8 @@ public class LevelManagerScript : MonoBehaviour
             }
             else if (Time.time -_lastTimeBirdExist > 3)//下面写失败的代码
             {
-                //Debug.Log("You Lose");
+                FailureUIScript.Instance.Appear();
+                _settled = true;
             }
         }
 

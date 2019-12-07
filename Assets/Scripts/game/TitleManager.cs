@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro.EditorUtilities;
 using UnityEngine;
 
 public class TitleManager : MonoBehaviour
@@ -26,5 +27,24 @@ public class TitleManager : MonoBehaviour
     public void MuteSwitch()
     {
         GameManager.Instance.MuteSwitch();
+    }
+
+    public void Pause()
+    {
+        Time.timeScale = 0;
+    }
+    public void Continue()
+    {
+        Time.timeScale = 1;
+        Debug.Log("CCCCC");
+    }
+    public void NextLevel()
+    {
+        GameManager.Instance.GotoLevel(LevelManagerScript.Instance.level+1);
+    }
+
+    public void Restart()
+    {
+        GameManager.Instance.GotoLevel(LevelManagerScript.Instance.level);
     }
 }

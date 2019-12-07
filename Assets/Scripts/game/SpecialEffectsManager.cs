@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -50,7 +51,7 @@ public class SpecialEffectsManager : MonoBehaviour
         Debug.Log(scoreBox.GetComponentInChildren<SpriteRenderer>());*/
     }
 
-    SpecialEffectsManager()
+    private void Start()
     {
         if(Instance==null)
             Instance = this;

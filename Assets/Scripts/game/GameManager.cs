@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioClip levelBGM = null;
     public static GameManager Instance;
     private bool _mute;
+    public bool Mute => _mute;
+
     private Tube _level;
     public int[] highestScore = {0};
     public Tube Level { get=>_level; }
@@ -47,7 +49,9 @@ public class GameManager : MonoBehaviour
         if (_atLevel)
         {
             _audioSource.Stop();
-            _audioSource.PlayOneShot(titleBGM);
+            _audioSource.clip = titleBGM;
+            _audioSource.Play();
+            _audioSource.loop = true;
             _atLevel = false;
         }
     }
@@ -57,19 +61,22 @@ public class GameManager : MonoBehaviour
         if (_atLevel)
         {
             _audioSource.Stop();
-            _audioSource.PlayOneShot(titleBGM);
+            _audioSource.clip = titleBGM;
+            _audioSource.Play();
+            _audioSource.loop = true;
             _atLevel = false;
         }
     }
     public void GotoLevel(int levelIndex)
     {
-        Debug.Log("Level" + levelIndex);
         SceneManager.LoadScene("Level" + levelIndex);
         if (!_atLevel)
         {
             _audioSource.Stop();
-            _audioSource.PlayOneShot(levelBGM);
-            _atLevel = true;
+            _audioSource.clip = levelBGM;
+            _audioSource.Play();
+            _audioSource.loop = true;
+            _atLevel = false;
         }
     }
 

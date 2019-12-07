@@ -13,6 +13,6 @@ public class MuteButtonScript : MonoBehaviour
         {
             GameManager.Instance.MuteSwitch();
         }
-        stopPic.enabled = !stopPic.enabled;
+        stopPic.enabled = GameManager.Instance.Mute;
     }
 }

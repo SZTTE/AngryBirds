@@ -32,6 +32,7 @@ public class SettlementCanvasScript : MonoBehaviour
 
     public void Appear(int score)
     {
+        Time.timeScale = 0;
         int level = LevelManagerScript.Instance.level;
         if (score > GameManager.Instance.highestScore[level])
             GameManager.Instance.highestScore[level] = score;

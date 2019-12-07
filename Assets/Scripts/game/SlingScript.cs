@@ -115,10 +115,10 @@ public class SlingScript : MonoBehaviour
     private bool lineLongEnough = false;
     void Update()
     {
+        Debug.Log(_birdNumber.Now);
         ////////////////////////////////////////////////////////////////////////////////////////////////////////拖拽控制
         if (_state == SlingState.Release && holder.draging) _state = SlingState.Stretched;
         if (_state == SlingState.Stretched && !holder.draging) _state = SlingState.Release;
-
         
         //线渲染器控制
         lineBack.SetPosition(1,holderPicTransform.position);
@@ -132,7 +132,6 @@ public class SlingScript : MonoBehaviour
         double theta = Math.Atan2(relativePosition.y,relativePosition.x);
         double lineLength = Math.Sqrt( Math.Pow(relativePosition.x, 2) + Math.Pow(relativePosition.y, 2) );
         if (lineLength > _maxLength) lineLength = _maxLength;
-
 
         switch (_state) {
         case SlingState.Stretched://紧绷状态

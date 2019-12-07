@@ -7,7 +7,7 @@ public class HolderScript : MonoBehaviour
 {
     public bool draging = false;
     public MonoBehaviour slingScript;
-    [SerializeField] private AudioClip stretchSound;
+    [SerializeField] private AudioClip stretchSound = null;
 
 
     private void OnMouseDown()
