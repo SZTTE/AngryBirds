@@ -151,7 +151,7 @@ public abstract class Bird : Entity
         SpecialEffectsManager.Instance.Feathers(transform.position,feather1,feather2,feather3);
         Destroy(gameObject);
     }
-    public void DeleteTrait()
+    public virtual void DeleteTrait()
     {
         TrailScript.Instance.Clear();
     }
