@@ -173,7 +173,6 @@ public abstract class Bird : Entity
         ImStillAlive();
         if (!skillUsed && !hit && fired && Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Skill");
             Skill();
             skillUsed = true;
         }

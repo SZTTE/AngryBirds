@@ -9,8 +9,10 @@
           <e p="game" t="Include">
             <e p="AudioManager.cs" t="Include" />
             <e p="BigPigScript.cs" t="Include" />
+            <e p="BlueBirdScript.cs" t="Include" />
             <e p="CameraScript.cs" t="Include" />
             <e p="classes.cs" t="Include" />
+            <e p="CloneBlueScript.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
             <e p="HolderScript.cs" t="Include" />
             <e p="LevelManagerScript.cs" t="Include" />

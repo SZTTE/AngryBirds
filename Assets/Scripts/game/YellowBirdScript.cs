@@ -14,7 +14,6 @@ public class YellowBirdScript : Bird
 
     public override void Skill()
     {
-        Debug.Log("here");
         _rigidbody2D.velocity *= 2;
     }
 
