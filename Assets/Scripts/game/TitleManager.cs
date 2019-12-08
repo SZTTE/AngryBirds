@@ -36,7 +36,6 @@ public class TitleManager : MonoBehaviour
     public void Continue()
     {
         Time.timeScale = 1;
-        Debug.Log("CCCCC");
     }
     public void NextLevel()
     {

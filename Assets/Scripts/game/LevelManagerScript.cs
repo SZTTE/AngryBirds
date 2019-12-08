@@ -61,7 +61,6 @@ public class LevelManagerScript : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(_lastTimeBirdExist);
         if (Time.time - _lastTimeBlockMove > 3&& !_settled)        //在块都静止之后才判定胜负
         {
             if (Time.time - _lastTimePigExist > 0)     //下面写胜利的代码

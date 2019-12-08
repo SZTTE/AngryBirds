@@ -115,7 +115,6 @@ public class SlingScript : MonoBehaviour
     private bool lineLongEnough = false;
     void Update()
     {
-        Debug.Log(_birdNumber.Now);
         ////////////////////////////////////////////////////////////////////////////////////////////////////////拖拽控制
         if (_state == SlingState.Release && holder.draging) _state = SlingState.Stretched;
         if (_state == SlingState.Stretched && !holder.draging) _state = SlingState.Release;

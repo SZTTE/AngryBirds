@@ -54,6 +54,7 @@ public abstract class Bird : Entity
     protected Transform _anchorTransform;
     protected bool fired = false;
     protected bool hit = false;
+    protected bool skillUsed = false;
     [HideInInspector]public bool haveJumpedToSling = false;
     [SerializeField] protected Sprite feather1;
     [SerializeField] protected Sprite feather2;
@@ -108,7 +109,11 @@ public abstract class Bird : Entity
         disPer10ms.z = 0;
         StartCoroutine(Move33TimesIn330ms(disPer10ms));
     }
-    public abstract void Skill();
+
+    public virtual void Skill()
+    {
+    }
+
     public void Ani_OnSling()
     {
         _animator.SetTrigger("onSling");
@@ -161,11 +166,17 @@ public abstract class Bird : Entity
     {
         if (fired)
         {
-            if(_rigidbody2D.velocity.magnitude>0.07)_highSpeedLastTime = Time.time;
+            if(_rigidbody2D.velocity.magnitude>0.5f)_highSpeedLastTime = Time.time;
             if(Time.time-_highSpeedLastTime>5) Ani_Disappear();
             //Debug.Log("time now"+Time.time+"low begin"+_highSpeedLastTime);
         }
         ImStillAlive();
+        if (!skillUsed && !hit && fired && Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("Skill");
+            Skill();
+            skillUsed = true;
+        }
     }
 }
 
