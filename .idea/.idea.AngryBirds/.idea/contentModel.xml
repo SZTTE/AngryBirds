@@ -9,6 +9,7 @@
           <e p="game" t="Include">
             <e p="AudioManager.cs" t="Include" />
             <e p="BigPigScript.cs" t="Include" />
+            <e p="BlackBirdScript.cs" t="Include" />
             <e p="BlueBirdScript.cs" t="Include" />
             <e p="CameraScript.cs" t="Include" />
             <e p="classes.cs" t="Include" />

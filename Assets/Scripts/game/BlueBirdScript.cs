@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BlueBirdScript : Bird
 {
-    [SerializeField] private GameObject clone;
+    [SerializeField] private GameObject clone = null;
     public static GameObject b1;
     public static GameObject b2;
     public BlueBirdScript()

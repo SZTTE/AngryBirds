@@ -31,7 +31,7 @@ public abstract class Entity : MonoBehaviour//实体类
     public Tube State => state;
     protected abstract void Disappear();
 
-    protected void InitializeReferences()//初始化对象引用
+    protected virtual void InitializeReferences()//初始化对象引用
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _collider2D = GetComponent<Collider2D>();
@@ -62,7 +62,7 @@ public abstract class Bird : Entity
     [SerializeField] protected Sprite myScorePic;
     [SerializeField] protected AudioClip fireSound;
     [SerializeField] protected AudioClip hitSound;
-    protected new void InitializeReferences()//初始化后取消鸟的模拟
+    protected override void InitializeReferences()//初始化后取消鸟的模拟
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _collider2D = GetComponent<Collider2D>();
@@ -146,7 +146,7 @@ public abstract class Bird : Entity
     {
         LevelManagerScript.Instance.BirdExist();
     }
-    protected void DestroyMe() //由动画启动
+    protected virtual void DestroyMe() //由动画启动
     {
         SpecialEffectsManager.Instance.Feathers(transform.position,feather1,feather2,feather3);
         Destroy(gameObject);
@@ -161,8 +161,8 @@ public abstract class Bird : Entity
         LevelManagerScript.Instance.ScoreAdd(10000);
     }
 
-    private float _highSpeedLastTime;
-    protected void Update()
+    protected float _highSpeedLastTime;
+    protected virtual void Update()
     {
         if (fired)
         {
