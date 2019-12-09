@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleBGM: {fileID: 8300000, guid: 9b2c1f7e9dd2c184b9aec577c88708e8, type: 3}
   levelBGM: {fileID: 8300000, guid: 69233efdc2f276a4e9c1a58235f06071, type: 3}
-  highestScore: 00000000
+  highestScore: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!82 &7733013967565067352
 AudioSource:
   m_ObjectHideFlags: 0
