@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WoodenBlock : Block
+public class GlassBlock : Block
 {
-    public WoodenBlock()
+    public GlassBlock()
     {
-        BirdSensitivity.Yellow = 3f;
+        BirdSensitivity.Blue = 7f;
     }
     // Start is called before the first frame update
     void Start()

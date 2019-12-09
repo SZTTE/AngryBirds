@@ -190,6 +190,7 @@ public abstract class Block : Entity
     [SerializeField] protected AudioClip[] collisionSound;
     protected AudioClip UsedCollisionSound;
     protected AudioClip UsedDestroySound;
+    [SerializeField]protected int settingLife = 0;
     
 
     protected void OnCollisionEnter2D(Collision2D other)
@@ -254,6 +255,8 @@ public abstract class Block : Entity
     {
         state.Full = allPics.Count;
         state.Now = state.Full;
+        life.Full = settingLife;
+        life.Now = settingLife;
     }
     
     protected override void Disappear()
