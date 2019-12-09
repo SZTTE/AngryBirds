@@ -82,7 +82,7 @@ public abstract class Bird : Entity
     {
         _containerAnimator.SetTrigger("JumpAndRoll");
     }
-    private IEnumerator Move33TimesIn330ms(Vector3 delta)
+    protected IEnumerator Move33TimesIn330ms(Vector3 delta)
     {
         Vector3 positionBeforeJump = transform.position;
         for (int i = 0; i < 33; i++)
@@ -101,7 +101,7 @@ public abstract class Bird : Entity
         yield return new WaitForSeconds(Random.Range(0.0f,2.0f));
         _animator.SetTrigger("delayEnds");
     }
-    public void JumpTo(Vector3 endPosition)//把上面那个函数挂进协程
+    public virtual void JumpTo(Vector3 endPosition)//把上面那个函数挂进协程
     {
         _transform.parent = null;
         Vector3 beginPosition = _transform.position;

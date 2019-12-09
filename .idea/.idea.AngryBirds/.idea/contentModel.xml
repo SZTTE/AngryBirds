@@ -14,6 +14,7 @@
             <e p="CameraScript.cs" t="Include" />
             <e p="classes.cs" t="Include" />
             <e p="CloneBlueScript.cs" t="Include" />
+            <e p="EggScript.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
             <e p="HolderScript.cs" t="Include" />
             <e p="LevelManagerScript.cs" t="Include" />
@@ -27,6 +28,7 @@
             <e p="test.cs" t="Include" />
             <e p="TitleManager.cs" t="Include" />
             <e p="TrailScript.cs" t="Include" />
+            <e p="WhiteBirdScript.cs" t="Include" />
             <e p="WoodenBlock.cs" t="Include" />
             <e p="YellowBirdScript.cs" t="Include" />
           </e>

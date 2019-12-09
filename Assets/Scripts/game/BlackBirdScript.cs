@@ -7,6 +7,7 @@ public class BlackBirdScript : Bird
 {
     private Collider2D _explosionCollider;
     private bool exploding = false;
+    [SerializeField] private AudioClip explosionSound = null;
 
     public BlackBirdScript()
     {
@@ -32,8 +33,12 @@ public class BlackBirdScript : Bird
 
     public override void Skill()
     {
+        TrailScript.Instance.StopDrawing();
+        _rigidbody2D.simulated = false;
+        skillUsed = true;
         exploding = true;
         _animator.SetTrigger("explode");
+        AudioManager.Instance.Play(explosionSound,1);
     }
 
     public void Smoke()//由动画启动
@@ -45,7 +50,7 @@ public class BlackBirdScript : Bird
     {
         if (exploding)
         {
-            Debug.Log("here");
+            Debug.Log("exploding");
             Vector2 deltaPosition = other.transform.position - transform.position;
             Vector2 direction = deltaPosition / deltaPosition.magnitude;
             other.GetComponent<Rigidbody2D>().AddForce(200f * (1.5f - deltaPosition.magnitude) * direction);
