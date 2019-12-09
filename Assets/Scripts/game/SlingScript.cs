@@ -71,8 +71,12 @@ public class SlingScript : MonoBehaviour
     /// <param name="intensity">强度，从0到1</param>
     private void Fire(double angle, double intensity)//角度从0到2pi，强度从0到1
     {
-        if(_birdNumber.Now!=0)
+        if (_birdNumber.Now != 0)
+        {
+            TrailScript.Instance.StopDrawing();
             birds[_birdNumber.Now-1].DeleteTrait();
+        }
+        
         TrailScript.Instance.StartDrawing(birds[_birdNumber.Now].transform);
         birds[_birdNumber.Now]._rigidbody2D.simulated = true;
         double speed = 15;

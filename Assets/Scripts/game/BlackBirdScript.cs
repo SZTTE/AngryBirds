@@ -33,7 +33,6 @@ public class BlackBirdScript : Bird
 
     public override void Skill()
     {
-        TrailScript.Instance.StopDrawing();
         _rigidbody2D.simulated = false;
         skillUsed = true;
         exploding = true;

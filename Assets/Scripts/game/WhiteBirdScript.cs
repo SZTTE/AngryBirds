@@ -28,6 +28,7 @@ public class WhiteBirdScript : Bird
         _animator.SetTrigger("empty");
         _rigidbody2D.velocity = Vector2.up*20+Vector2.right*10;
         Instantiate(egg, transform.position + Vector3.down * 0.7f, Quaternion.identity);
+        Invoke("DestroyMe",7);
     }
 
     public void Smoke()//由动画启动

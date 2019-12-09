@@ -152,6 +152,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: df941724a33eb3c4b9c3ec70e08ec210, type: 3}
   - {fileID: 8300000, guid: 99d1d9f0976a52240b2f2d06d76216c9, type: 3}
   - {fileID: 8300000, guid: cafcb9a2d4c17df478c6e185934dc8e2, type: 3}
+  settingLife: 70
   myScorePic: {fileID: 0}
   myScore: 10000
 --- !u!82 &4785652768565796028

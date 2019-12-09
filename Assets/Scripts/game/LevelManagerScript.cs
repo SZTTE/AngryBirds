@@ -10,10 +10,13 @@ public class LevelManagerScript : MonoBehaviour
     private float _lastTimeBirdExist;
     private float _lastTimeBlockMove;
     private int _score = 0;
+    private AudioSource _audioSource;
     public int Score => _score;
     public int level = 0;
     [SerializeField] private Text scoreBox = null;
-
+    [SerializeField] private AudioClip startSound;
+    [SerializeField] private AudioClip winSound;
+    [SerializeField] private AudioClip loseSound;
     /// <summary>
     /// 加分
     /// </summary>
@@ -58,20 +61,25 @@ public class LevelManagerScript : MonoBehaviour
         _lastTimeBirdExist = Time.time;
         _lastTimeBlockMove = Time.time;
         _score = 0;
+        _audioSource = GetComponent<AudioSource>();
+        _audioSource.PlayOneShot(startSound);
     }
     void Update()
     {
+        Debug.Log(_lastTimeBirdExist);
         if (Time.time - _lastTimeBlockMove > 3&& !_settled)        //在块都静止之后才判定胜负
         {
             if (Time.time - _lastTimePigExist > 0)     //下面写胜利的代码
             {
                 StartCoroutine(SlingScript.Instance.ShowBirdsScore());
                 _settled = true;
+                _audioSource.PlayOneShot(winSound);
             }
             else if (Time.time -_lastTimeBirdExist > 3)//下面写失败的代码
             {
                 FailureUIScript.Instance.Appear();
                 _settled = true;
+                _audioSource.PlayOneShot(loseSound);
             }
         }
 
