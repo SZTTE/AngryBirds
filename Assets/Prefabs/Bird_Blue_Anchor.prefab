@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4486762017422334661}
   - component: {fileID: 6792861452615870368}
   m_Layer: 0
-  m_Name: Bird_Yellow
+  m_Name: Bird_Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,6 +58,7 @@ MonoBehaviour:
     type: 3}
   fireSound: {fileID: 8300000, guid: 3c53108767d3a5049816768d0c1a7bcc, type: 3}
   hitSound: {fileID: 8300000, guid: 0d97329a41166b04ea82f8e752833539, type: 3}
+  skillSound: {fileID: 8300000, guid: 83214bc0dd07c694ca5ac891db188036, type: 3}
   clone: {fileID: 5589492446923904446, guid: fe5b440be160e35488410ddd3d48e69f, type: 3}
 --- !u!212 &2693324990194187388
 SpriteRenderer:
@@ -172,7 +173,7 @@ TrailRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2693324990194187386}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

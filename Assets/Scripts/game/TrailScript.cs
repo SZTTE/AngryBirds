@@ -14,7 +14,7 @@ public class TrailScript : MonoBehaviour
         transform.position = toFollow.position;
         _trailRenderer.Clear();
         _trailRenderer.emitting = true;
-        while (true)
+        while (toFollow!=null)
         {
             transform.position = toFollow.position;
             yield return new WaitForSeconds(0.01f);

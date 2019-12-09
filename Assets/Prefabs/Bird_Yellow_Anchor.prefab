@@ -58,6 +58,7 @@ MonoBehaviour:
     type: 3}
   fireSound: {fileID: 8300000, guid: 3f651123b46b1364495752fb03d0307a, type: 3}
   hitSound: {fileID: 8300000, guid: 0f79181332d61b04583d0d082b873d61, type: 3}
+  skillSound: {fileID: 8300000, guid: be2e2c7eceaef5c49bbc3c7c681636bb, type: 3}
 --- !u!212 &475121353384628859
 SpriteRenderer:
   m_ObjectHideFlags: 0

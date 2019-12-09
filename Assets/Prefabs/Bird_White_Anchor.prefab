@@ -140,6 +140,7 @@ MonoBehaviour:
     type: 3}
   fireSound: {fileID: 8300000, guid: 377496e957dbb574e816713335896a31, type: 3}
   hitSound: {fileID: 8300000, guid: ef89aa3f965609e4b9bf8edd359e2bb1, type: 3}
+  skillSound: {fileID: 8300000, guid: ff9653b55e939ea4e991aef1eba07c8f, type: 3}
   egg: {fileID: 1873575185233214291, guid: 2b913bf6d63ad58469c15e1d4ad038b1, type: 3}
 --- !u!212 &8724353616158715585
 SpriteRenderer:
