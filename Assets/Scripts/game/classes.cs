@@ -172,12 +172,12 @@ public abstract class Bird : Entity
             //Debug.Log("time now"+Time.time+"low begin"+_highSpeedLastTime);
         }
         ImStillAlive();
-        if (!skillUsed && !hit && fired && Input.GetMouseButtonDown(0))
         {
             if(skillSound!=null)      _audioSource.PlayOneShot(skillSound);
             Skill();
             skillUsed = true;
         }
+        if(transform.position.y<-20)     DestroyMe();
     }
 }
 

@@ -53,14 +53,14 @@ public class SlingScript : MonoBehaviour
 
     public IEnumerator ShowBirdsScore()
     {
-        _state = SlingState.End;
-        while (_birdNumber.Now <= _birdNumber.Full)
+        while (_state!=SlingState.OutOfBird && _birdNumber.Now <= _birdNumber.Full)
         {
             birds[_birdNumber.Now].ShouMyScore();
             birds[_birdNumber.Now].JumpAndRoll();
             yield return new WaitForSeconds(1.8f);
             _birdNumber.Now++;
         }
+        _state = SlingState.End;
         SettlementCanvasScript.Instance.Appear(LevelManagerScript.Instance.Score);
     }
 
@@ -85,7 +85,6 @@ public class SlingScript : MonoBehaviour
         _state = SlingState.Unloaded;
         birds[_birdNumber.Now].transform.parent = null;
         birds[_birdNumber.Now].Ani_Fly();
-
         if (_birdNumber.Now < _birdNumber.Full) _birdNumber.Now++;
         else _state = SlingState.OutOfBird;
     }
