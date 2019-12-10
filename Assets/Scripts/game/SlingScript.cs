@@ -41,7 +41,7 @@ public class SlingScript : MonoBehaviour
     /// <returns></returns>
     private IEnumerator Reload()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1.5f);
         birds[_birdNumber.Now].JumpTo(holder.transform.position);
         while (birds[_birdNumber.Now].haveJumpedToSling)//等待鸟跳上弹弓完成
             yield return new WaitForSeconds(0.1f);
