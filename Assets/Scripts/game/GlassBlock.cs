@@ -6,7 +6,7 @@ public class GlassBlock : Block
 {
     public GlassBlock()
     {
-        BirdSensitivity.Blue = 7f;
+        BirdSensitivity.Blue = 4f;
     }
     // Start is called before the first frame update
     void Start()

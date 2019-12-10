@@ -206,23 +206,23 @@ public abstract class Block : Entity
         {
             case "RedBird":
                 Hurt((int) (point.normalImpulse*10*BirdSensitivity.Red) );
-                other.rigidbody.AddForce(point.otherRigidbody.velocity.normalized * point.normalImpulse*15*(BirdSensitivity.Red-1));
+                other.rigidbody.AddForce(point.otherRigidbody.velocity.normalized * point.normalImpulse*10*(BirdSensitivity.Red-1));
                 break;
             case "BlueBird":
                 Hurt((int) (point.normalImpulse*10*BirdSensitivity.Blue) );
-                other.rigidbody.AddForce(point.otherRigidbody.velocity.normalized * point.normalImpulse*15*(BirdSensitivity.Blue-1));
+                other.rigidbody.AddForce(point.otherRigidbody.velocity.normalized * point.normalImpulse*10*(BirdSensitivity.Blue-1));
                 break;
             case "YellowBird":
                 Hurt((int) (point.normalImpulse*10*BirdSensitivity.Yellow) );
-                other.rigidbody.AddForce(point.otherRigidbody.velocity.normalized * point.normalImpulse*15*(BirdSensitivity.Yellow-1));
+                other.rigidbody.AddForce(point.otherRigidbody.velocity.normalized * point.normalImpulse*10*(BirdSensitivity.Yellow-1));
                 break;
             case "BlackBird":
                 Hurt((int) (point.normalImpulse*10*BirdSensitivity.Black) );
-                other.rigidbody.AddForce(point.otherRigidbody.velocity.normalized * point.normalImpulse*15*(BirdSensitivity.Black-1));
+                other.rigidbody.AddForce(point.otherRigidbody.velocity.normalized * point.normalImpulse*10*(BirdSensitivity.Black-1));
                 break;
             case "WhiteBird":
                 Hurt((int) (point.normalImpulse*10*BirdSensitivity.White) );
-                other.rigidbody.AddForce(point.otherRigidbody.velocity.normalized * point.normalImpulse*15*(BirdSensitivity.White-1));
+                other.rigidbody.AddForce(point.otherRigidbody.velocity.normalized * point.normalImpulse*10*(BirdSensitivity.White-1));
                 break;
         }
     }

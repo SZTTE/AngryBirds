@@ -24,10 +24,10 @@ public class BlueBirdScript : Bird
 
     public override void Skill()
     {
-        b1 = Instantiate(clone, transform.position+0.5f*Vector3.up, Quaternion.identity);
-        b1.GetComponent<Rigidbody2D>().velocity= _rigidbody2D.velocity+1f*Vector2.up;
-        b2 = Instantiate(clone, transform.position+0.5f*Vector3.down, Quaternion.identity);
-        b2.GetComponent<Rigidbody2D>().velocity=_rigidbody2D.velocity-1f*Vector2.up;
+        b1 = Instantiate(clone, transform.position+0.3f*Vector3.up, Quaternion.identity);
+        b1.GetComponent<Rigidbody2D>().velocity= _rigidbody2D.velocity+2f*Vector2.up;
+        b2 = Instantiate(clone, transform.position+0.3f*Vector3.down, Quaternion.identity);
+        b2.GetComponent<Rigidbody2D>().velocity=_rigidbody2D.velocity-2f*Vector2.up;
     }
 
     public void Smoke()//由动画启动
