@@ -70,7 +70,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0cf5e234f39de3847a120877d3fe7dd5, type: 3}
   - {fileID: 8300000, guid: 1dafc372ce2591d4684ccbcd5b9f484a, type: 3}
   - {fileID: 8300000, guid: 909a21320ee3ccc408c6390b79162142, type: 3}
-  settingLife: 100
+  settingLife: 70
 --- !u!212 &873051666812491700
 SpriteRenderer:
   m_ObjectHideFlags: 0

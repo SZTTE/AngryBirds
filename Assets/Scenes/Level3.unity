@@ -3735,7 +3735,7 @@ PrefabInstance:
     - target: {fileID: 5345589541961569189, guid: ae57e0a3572533e4c8d0b6ab29eb0b9c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5345589541961569189, guid: ae57e0a3572533e4c8d0b6ab29eb0b9c,
         type: 3}
@@ -4306,7 +4306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score2Stars: 18000
-  score3Stars: 27000
+  score3Stars: 26000
   star:
   - {fileID: 2131042666}
   - {fileID: 2134388918}
@@ -5844,7 +5844,7 @@ PrefabInstance:
     - target: {fileID: 3375791993224485207, guid: e17898869c15c764698e4ca8cb4190fd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.4289012
+      value: 1.399
       objectReference: {fileID: 0}
     - target: {fileID: 3375791993224485207, guid: e17898869c15c764698e4ca8cb4190fd,
         type: 3}
@@ -5890,6 +5890,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3375791993224485206, guid: e17898869c15c764698e4ca8cb4190fd,
+        type: 3}
+      propertyPath: settingLife
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e17898869c15c764698e4ca8cb4190fd, type: 3}

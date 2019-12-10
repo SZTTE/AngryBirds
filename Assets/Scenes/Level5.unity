@@ -5080,8 +5080,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd3913651fc36c44bdd7e963e1674da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score2Stars: 40000
-  score3Stars: 45000
+  score2Stars: 35000
+  score3Stars: 42000
   star:
   - {fileID: 2131042666}
   - {fileID: 2134388918}
