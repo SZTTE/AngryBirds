@@ -157,7 +157,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5345589541961569189}
   m_Layer: 0
-  m_Name: RedBird
+  m_Name: Bird_Red_Anchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

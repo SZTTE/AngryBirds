@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Pig
+  - BlackBird
+  - RedBird
+  - BlueBird
+  - YellowBird
+  - WhiteBird
   layers:
   - Default
   - TransparentFX

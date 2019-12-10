@@ -172,6 +172,8 @@ public abstract class Bird : Entity
             //Debug.Log("time now"+Time.time+"low begin"+_highSpeedLastTime);
         }
         ImStillAlive();
+        Debug.Log("skill Used = "+skillUsed);
+        if(!hit&&fired&&!skillUsed && Input.GetMouseButtonDown(0))
         {
             if(skillSound!=null)      _audioSource.PlayOneShot(skillSound);
             Skill();
@@ -199,7 +201,30 @@ public abstract class Block : Entity
     {
         ContactPoint2D point  = other.GetContact(0);
         if(!_audioSource.isPlaying && _audioSource.enabled)    _audioSource.PlayOneShot(UsedCollisionSound,0.3f);
-        Hurt((int) (point.normalImpulse*10) );
+        //Hurt((int) (point.normalImpulse*10) );
+        switch (other.gameObject.tag)
+        {
+            case "RedBird":
+                Hurt((int) (point.normalImpulse*10*BirdSensitivity.Red) );
+                other.rigidbody.AddForce(point.otherRigidbody.velocity.normalized * point.normalImpulse*10*(BirdSensitivity.Red-1));
+                break;
+            case "BlueBird":
+                Hurt((int) (point.normalImpulse*10*BirdSensitivity.Blue) );
+                other.rigidbody.AddForce(point.otherRigidbody.velocity.normalized * point.normalImpulse*10*(BirdSensitivity.Blue-1));
+                break;
+            case "YellowBird":
+                Hurt((int) (point.normalImpulse*10*BirdSensitivity.Yellow) );
+                other.rigidbody.AddForce(point.otherRigidbody.velocity.normalized * point.normalImpulse*10*(BirdSensitivity.Yellow-1));
+                break;
+            case "BlackBird":
+                Hurt((int) (point.normalImpulse*10*BirdSensitivity.Black) );
+                other.rigidbody.AddForce(point.otherRigidbody.velocity.normalized * point.normalImpulse*10*(BirdSensitivity.Black-1));
+                break;
+            case "WhiteBird":
+                Hurt((int) (point.normalImpulse*10*BirdSensitivity.White) );
+                other.rigidbody.AddForce(point.otherRigidbody.velocity.normalized * point.normalImpulse*10*(BirdSensitivity.White-1));
+                break;
+        }
     }
     protected new void InitializeReferences()//初始化对象引用
     {

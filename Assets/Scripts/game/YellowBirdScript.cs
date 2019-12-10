@@ -14,7 +14,7 @@ public class YellowBirdScript : Bird
 
     public override void Skill()
     {
-        _rigidbody2D.velocity *= 2;
+        _rigidbody2D.velocity = _rigidbody2D.velocity.normalized * 30f;
     }
 
     public void Smoke()//由动画启动

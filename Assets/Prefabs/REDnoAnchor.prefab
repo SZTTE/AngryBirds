@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 9019476597753790253}
   - component: {fileID: 7354145828732705176}
   m_Layer: 0
-  m_Name: BIRD_RED
-  m_TagString: Untagged
+  m_Name: REDnoAnchor
+  m_TagString: RedBird
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,7 +120,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &9019476597753790242
 MonoBehaviour:
@@ -141,6 +141,9 @@ MonoBehaviour:
   feather3: {fileID: 21300000, guid: e662e7c64f6f29c48a9a40f1d00be394, type: 3}
   myScorePic: {fileID: 4722777881887850919, guid: bad0419d5085de84cbaf1971557bbf0a,
     type: 3}
+  fireSound: {fileID: 0}
+  hitSound: {fileID: 0}
+  skillSound: {fileID: 0}
 --- !u!95 &9019476597753790253
 Animator:
   serializedVersion: 3
