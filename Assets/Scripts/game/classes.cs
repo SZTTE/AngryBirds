@@ -242,14 +242,16 @@ public abstract class Block : Entity
     {
         if (damage <= 10) return;
         life.Now -= damage;
+        if (life.Now <= 0) Disappear();
         state.Now = life.Now / (life.Full / state.Full) + 1;
         if (state.Now < 1) state.Now = 1;
         /*if (gameObject.CompareTag("Pig"))
             Debug.Log(_animator + ";" + gameObject + "life now is " + life.Now + "/" + life.Full + ",   state now is " +
                       state.Now + "/" + state.Full);*/
         _spriteRenderer.sprite = allPics[state.Now - 1];
-        if(life.Now<=0) Disappear();
+
         LevelManagerScript.Instance.ScoreAdd(6*damage);
+        
     }
 
     private void ImStillMoving()
