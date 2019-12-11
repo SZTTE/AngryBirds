@@ -172,7 +172,7 @@ public abstract class Bird : Entity
             //Debug.Log("time now"+Time.time+"low begin"+_highSpeedLastTime);
         }
         ImStillAlive();
-        Debug.Log("skill Used = "+skillUsed);
+        //Debug.Log("skill Used = "+skillUsed);
         if(!hit&&fired&&!skillUsed && Input.GetMouseButtonDown(0))
         {
             if(skillSound!=null)      _audioSource.PlayOneShot(skillSound);
