@@ -36,12 +36,14 @@ public class CameraScript : MonoBehaviour
         {
             _targetSize = _camera.orthographicSize;
         }
-        else if (_camera.orthographicSize >= 7 && _targetSize>_camera.orthographicSize)
+        else if (_camera.orthographicSize >= 7 && _targetSize>_camera.orthographicSize && LevelManagerScript.Instance.level!=24)//要是镜头太宽了（二十四关除外）
         {
+            Debug.Log("here?");
             _targetSize = _camera.orthographicSize;
         }
-        else if (_camera.orthographicSize < _targetSize-0.5f && _camera.orthographicSize<7)
+        else if (_camera.orthographicSize < _targetSize-0.5f)
         {
+            Debug.Log("Bigger");
             _camera.orthographicSize *= 1.01f;
             _collider.size *= 1.01f;
         }
