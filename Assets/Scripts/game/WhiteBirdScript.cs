@@ -26,7 +26,7 @@ public class WhiteBirdScript : Bird
     public override void Skill()
     {
         _animator.SetTrigger("empty");
-        _rigidbody2D.velocity = Vector2.up*20+Vector2.right*10;
+        _rigidbody2D.velocity = Vector2.up*13+Vector2.right*13;
         Instantiate(egg, transform.position + Vector3.down * 0.7f, Quaternion.identity);
         Invoke("DestroyMe",7);
     }
