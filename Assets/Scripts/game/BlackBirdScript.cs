@@ -33,7 +33,7 @@ public class BlackBirdScript : Bird
 
     public override void Skill()
     {
-        _rigidbody2D.simulated = false;
+        //_rigidbody2D.simulated = false;
         skillUsed = true;
         exploding = true;
         _animator.SetTrigger("explode");
@@ -47,12 +47,13 @@ public class BlackBirdScript : Bird
 
     private void OnTriggerStay2D(Collider2D other)
     {
+        //Debug.Log("trigger alive");
         if (exploding)
         {
             Debug.Log("exploding");
             Vector2 deltaPosition = other.transform.position - transform.position;
             Vector2 direction = deltaPosition / deltaPosition.magnitude;
-            other.GetComponent<Rigidbody2D>().AddForce(200f * (1.5f - deltaPosition.magnitude) * direction);
+            other.attachedRigidbody.AddForce(500f * (2.5f - deltaPosition.magnitude)*(2.5f - deltaPosition.magnitude) * direction);
         }
     }
 
@@ -67,6 +68,7 @@ public class BlackBirdScript : Bird
     
     protected override void Update()
     {
+        //Debug.Log("exploding = "+exploding);
         if (fired)
         {
             if(_rigidbody2D.velocity.magnitude>0.5f)_highSpeedLastTime = Time.time;
