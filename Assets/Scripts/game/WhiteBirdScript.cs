@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WhiteBirdScript : Bird
 {
-    [SerializeField] private GameObject egg;
+    [SerializeField] private GameObject egg = null;
     public WhiteBirdScript()
     {
         life.Full = 1000;

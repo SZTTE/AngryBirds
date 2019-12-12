@@ -14,9 +14,9 @@ public class LevelManagerScript : MonoBehaviour
     public int Score => _score;
     public int level = 0;
     [SerializeField] private Text scoreBox = null;
-    [SerializeField] private AudioClip startSound;
-    [SerializeField] private AudioClip winSound;
-    [SerializeField] private AudioClip loseSound;
+    [SerializeField] private AudioClip startSound = null;
+    [SerializeField] private AudioClip winSound = null;
+    [SerializeField] private AudioClip loseSound = null;
     /// <summary>
     /// 加分
     /// </summary>

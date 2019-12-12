@@ -8,7 +8,7 @@ public class EggScript : MonoBehaviour
     private Animator _animator;
     private Rigidbody2D _rigidbody2D;
     private bool exploding = false;
-    [SerializeField] private AudioClip explosionSound;
+    [SerializeField] private AudioClip explosionSound = null;
     // Start is called before the first frame update
     void Start()
     {

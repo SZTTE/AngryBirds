@@ -33,7 +33,8 @@ public class BlackBirdScript : Bird
 
     public override void Skill()
     {
-        //_rigidbody2D.simulated = false;
+        _collider2D.enabled = false;
+        _rigidbody2D.velocity = Vector2.zero;
         skillUsed = true;
         exploding = true;
         _animator.SetTrigger("explode");
@@ -47,10 +48,8 @@ public class BlackBirdScript : Bird
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        //Debug.Log("trigger alive");
         if (exploding)
         {
-            Debug.Log("exploding");
             Vector2 deltaPosition = other.transform.position - transform.position;
             Vector2 direction = deltaPosition / deltaPosition.magnitude;
             other.attachedRigidbody.AddForce(500f * (2.5f - deltaPosition.magnitude)*(2.5f - deltaPosition.magnitude) * direction);
@@ -59,6 +58,7 @@ public class BlackBirdScript : Bird
 
     protected override void DestroyMe() //由动画启动
     {
+        
         Destroy(gameObject);
     }
     protected override void Disappear()
@@ -68,12 +68,11 @@ public class BlackBirdScript : Bird
     
     protected override void Update()
     {
-        //Debug.Log("exploding = "+exploding);
+        Debug.Log("exploding = "+exploding);
         if (fired)
         {
             if(_rigidbody2D.velocity.magnitude>0.5f)_highSpeedLastTime = Time.time;
-            if(Time.time-_highSpeedLastTime>5) Ani_Disappear();
-            //Debug.Log("time now"+Time.time+"low begin"+_highSpeedLastTime);
+            //if(Time.time-_highSpeedLastTime>5 && !skillUsed) Skill();
         }
         ImStillAlive();
         if (!skillUsed && fired && Input.GetMouseButtonDown(0))
