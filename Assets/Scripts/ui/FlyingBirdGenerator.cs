@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class FlyingBirdGenerator : MonoBehaviour
 {
-    [SerializeField]private Sprite[] birdPics;
-    [SerializeField]private GameObject flyingBird;
+    [SerializeField]private Sprite[] birdPics = null;
+    [SerializeField]private GameObject flyingBird = null;
     // Start is called before the first frame update
     IEnumerator Start()
     {

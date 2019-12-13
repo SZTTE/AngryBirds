@@ -48,9 +48,17 @@ public class SettlementCanvasScript : MonoBehaviour
         {
             star[2].enabled = false;
             star[1].enabled = false;
+            GameManager.Instance.levelStars[level] = 1;
         }
         else if (score < score3Stars)
+        {
             star[2].enabled = false;
+            GameManager.Instance.levelStars[level] = 2;
+        }
+        else
+        {
+            GameManager.Instance.levelStars[level] = 3;
+        }
         GetComponent<Canvas>().enabled = true;
     }
 }

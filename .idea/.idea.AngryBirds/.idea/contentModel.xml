@@ -45,6 +45,7 @@
             <e p="PasingPic.cs" t="Include" />
             <e p="PauseUIScript.cs" t="Include" />
             <e p="SettlementCanvasScript.cs" t="Include" />
+            <e p="Stars.cs" t="Include" />
           </e>
         </e>
       </e>
