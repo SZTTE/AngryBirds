@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
         _audioSource.clip = titleBGM;
         _audioSource.Play();
         _atLevel = false;
+        ReadPlayerPref();
     }
     public void GoToTitleScene()
     {
@@ -54,6 +55,7 @@ public class GameManager : MonoBehaviour
             _audioSource.loop = true;
             _atLevel = false;
         }
+        WritePlayerPref();
     }
     public void GotoLevelSelectScene()
     {
@@ -66,6 +68,7 @@ public class GameManager : MonoBehaviour
             _audioSource.loop = true;
             _atLevel = false;
         }
+        WritePlayerPref();
     }
     public void GotoLevel(int levelIndex)
     {
@@ -78,6 +81,28 @@ public class GameManager : MonoBehaviour
             _audioSource.loop = true;
             _atLevel = true;
         }
+        WritePlayerPref();
+    }
+
+    private void WritePlayerPref()
+    {
+        //存關卡分數
+        for (int i = 0; i <= _level.Full; i++)
+        {
+            PlayerPrefs.SetInt("ScoreOfLevel"+i,highestScore[i]);
+        }
+        //存當前關卡
+        PlayerPrefs.SetInt("LevelNow",_level.Now);
+    }
+    private void ReadPlayerPref()
+    {
+        //存關卡分數
+        for (int i = 0; i <= _level.Full; i++)
+        {
+            highestScore[i] = PlayerPrefs.GetInt("ScoreOfLevel"+i,0);
+        }
+        //存當前關卡
+        _level.Now=PlayerPrefs.GetInt("LevelNow",1);
     }
 
 }
