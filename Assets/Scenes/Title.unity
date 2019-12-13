@@ -275,6 +275,156 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!1 &156148819
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 156148821}
+  - component: {fileID: 156148820}
+  m_Layer: 0
+  m_Name: FlyingBirdGenerator (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &156148820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156148819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 788f09792147f1f42b28e6dd1a3b012a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  birdPics:
+  - {fileID: 21300000, guid: 558ef3462da5d9143ac5e988b4f0d859, type: 3}
+  - {fileID: 21300000, guid: 5c33d934ccb58d64a870a4cafad6e19b, type: 3}
+  - {fileID: 21300000, guid: 47cb1d37feec5a64e9cf4db9276f1b71, type: 3}
+  - {fileID: 21300000, guid: bfa8337932f6fae4dbae6bf668694193, type: 3}
+  - {fileID: 21300000, guid: 180b9f9412c2faf499dada9446b1e476, type: 3}
+  flyingBird: {fileID: 1248994710}
+--- !u!4 &156148821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156148819}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.38, y: -5.49, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &257009135
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 257009137}
+  - component: {fileID: 257009136}
+  m_Layer: 0
+  m_Name: FlyingBirdGenerator (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &257009136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257009135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 788f09792147f1f42b28e6dd1a3b012a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  birdPics:
+  - {fileID: 21300000, guid: 558ef3462da5d9143ac5e988b4f0d859, type: 3}
+  - {fileID: 21300000, guid: 5c33d934ccb58d64a870a4cafad6e19b, type: 3}
+  - {fileID: 21300000, guid: 47cb1d37feec5a64e9cf4db9276f1b71, type: 3}
+  - {fileID: 21300000, guid: bfa8337932f6fae4dbae6bf668694193, type: 3}
+  - {fileID: 21300000, guid: 180b9f9412c2faf499dada9446b1e476, type: 3}
+  flyingBird: {fileID: 1248994710}
+--- !u!4 &257009137
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257009135}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.52, y: -5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &265226479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 265226481}
+  - component: {fileID: 265226480}
+  m_Layer: 0
+  m_Name: FlyingBirdGenerator (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &265226480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265226479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 788f09792147f1f42b28e6dd1a3b012a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  birdPics:
+  - {fileID: 21300000, guid: 558ef3462da5d9143ac5e988b4f0d859, type: 3}
+  - {fileID: 21300000, guid: 5c33d934ccb58d64a870a4cafad6e19b, type: 3}
+  - {fileID: 21300000, guid: 47cb1d37feec5a64e9cf4db9276f1b71, type: 3}
+  - {fileID: 21300000, guid: bfa8337932f6fae4dbae6bf668694193, type: 3}
+  - {fileID: 21300000, guid: 180b9f9412c2faf499dada9446b1e476, type: 3}
+  flyingBird: {fileID: 1248994710}
+--- !u!4 &265226481
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265226479}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -15.56, y: 2.34, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &323443820
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -578,6 +728,56 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &490733398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 490733400}
+  - component: {fileID: 490733399}
+  m_Layer: 0
+  m_Name: FlyingBirdGenerator (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &490733399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490733398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 788f09792147f1f42b28e6dd1a3b012a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  birdPics:
+  - {fileID: 21300000, guid: 558ef3462da5d9143ac5e988b4f0d859, type: 3}
+  - {fileID: 21300000, guid: 5c33d934ccb58d64a870a4cafad6e19b, type: 3}
+  - {fileID: 21300000, guid: 47cb1d37feec5a64e9cf4db9276f1b71, type: 3}
+  - {fileID: 21300000, guid: bfa8337932f6fae4dbae6bf668694193, type: 3}
+  - {fileID: 21300000, guid: 180b9f9412c2faf499dada9446b1e476, type: 3}
+  flyingBird: {fileID: 1248994710}
+--- !u!4 &490733400
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490733398}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.83, y: -5.38, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &516334495
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,6 +852,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 516334495}
   m_CullTransparentMesh: 0
+--- !u!1 &621213583
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 621213585}
+  - component: {fileID: 621213584}
+  m_Layer: 0
+  m_Name: FlyingBirdGenerator (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &621213584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621213583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 788f09792147f1f42b28e6dd1a3b012a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  birdPics:
+  - {fileID: 21300000, guid: 558ef3462da5d9143ac5e988b4f0d859, type: 3}
+  - {fileID: 21300000, guid: 5c33d934ccb58d64a870a4cafad6e19b, type: 3}
+  - {fileID: 21300000, guid: 47cb1d37feec5a64e9cf4db9276f1b71, type: 3}
+  - {fileID: 21300000, guid: bfa8337932f6fae4dbae6bf668694193, type: 3}
+  - {fileID: 21300000, guid: 180b9f9412c2faf499dada9446b1e476, type: 3}
+  flyingBird: {fileID: 1248994710}
+--- !u!4 &621213585
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621213583}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -14.4, y: 0.48, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &646418705
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,6 +982,56 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &746782502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 746782504}
+  - component: {fileID: 746782503}
+  m_Layer: 0
+  m_Name: FlyingBirdGenerator (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &746782503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746782502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 788f09792147f1f42b28e6dd1a3b012a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  birdPics:
+  - {fileID: 21300000, guid: 558ef3462da5d9143ac5e988b4f0d859, type: 3}
+  - {fileID: 21300000, guid: 5c33d934ccb58d64a870a4cafad6e19b, type: 3}
+  - {fileID: 21300000, guid: 47cb1d37feec5a64e9cf4db9276f1b71, type: 3}
+  - {fileID: 21300000, guid: bfa8337932f6fae4dbae6bf668694193, type: 3}
+  - {fileID: 21300000, guid: 180b9f9412c2faf499dada9446b1e476, type: 3}
+  flyingBird: {fileID: 1248994710}
+--- !u!4 &746782504
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746782502}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.61, y: 2.99, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &748660446
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,7 +1069,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 51, y: 55.699997}
+  m_AnchoredPosition: {x: 51, y: 55.700012}
   m_SizeDelta: {x: 81.79999, y: 89.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &748660448
@@ -882,6 +1182,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 748660446}
   m_CullTransparentMesh: 0
+--- !u!1 &790145051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 790145053}
+  - component: {fileID: 790145052}
+  m_Layer: 0
+  m_Name: FlyingBirdGenerator (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &790145052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790145051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 788f09792147f1f42b28e6dd1a3b012a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  birdPics:
+  - {fileID: 21300000, guid: 558ef3462da5d9143ac5e988b4f0d859, type: 3}
+  - {fileID: 21300000, guid: 5c33d934ccb58d64a870a4cafad6e19b, type: 3}
+  - {fileID: 21300000, guid: 47cb1d37feec5a64e9cf4db9276f1b71, type: 3}
+  - {fileID: 21300000, guid: bfa8337932f6fae4dbae6bf668694193, type: 3}
+  - {fileID: 21300000, guid: 180b9f9412c2faf499dada9446b1e476, type: 3}
+  flyingBird: {fileID: 1248994710}
+--- !u!4 &790145053
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790145051}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.96, y: -5.23, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &900090566
 GameObject:
   m_ObjectHideFlags: 0
@@ -1113,6 +1463,56 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &952936694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 952936696}
+  - component: {fileID: 952936695}
+  m_Layer: 0
+  m_Name: FlyingBirdGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &952936695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952936694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 788f09792147f1f42b28e6dd1a3b012a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  birdPics:
+  - {fileID: 21300000, guid: 558ef3462da5d9143ac5e988b4f0d859, type: 3}
+  - {fileID: 21300000, guid: 5c33d934ccb58d64a870a4cafad6e19b, type: 3}
+  - {fileID: 21300000, guid: 47cb1d37feec5a64e9cf4db9276f1b71, type: 3}
+  - {fileID: 21300000, guid: bfa8337932f6fae4dbae6bf668694193, type: 3}
+  - {fileID: 21300000, guid: 180b9f9412c2faf499dada9446b1e476, type: 3}
+  flyingBird: {fileID: 1248994710}
+--- !u!4 &952936696
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952936694}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.45, y: -0.71, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1020471550
 GameObject:
   m_ObjectHideFlags: 0
@@ -1207,7 +1607,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -80.20001, y: 55.699997}
+  m_AnchoredPosition: {x: -80.20001, y: 55.700012}
   m_SizeDelta: {x: 81.79999, y: 89.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1062985811
@@ -1698,6 +2098,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1238541625}
   m_CullTransparentMesh: 0
+--- !u!1 &1248994710 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2197191701564221264, guid: 6b93610ea0911c145b0484898c32efde,
+    type: 3}
+  m_PrefabInstance: {fileID: 2197191702473196230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1275769997
 GameObject:
   m_ObjectHideFlags: 0
@@ -2164,6 +2570,56 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679409170}
   m_Enabled: 1
+--- !u!1 &1706325011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1706325013}
+  - component: {fileID: 1706325012}
+  m_Layer: 0
+  m_Name: FlyingBirdGenerator (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1706325012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706325011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 788f09792147f1f42b28e6dd1a3b012a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  birdPics:
+  - {fileID: 21300000, guid: 558ef3462da5d9143ac5e988b4f0d859, type: 3}
+  - {fileID: 21300000, guid: 5c33d934ccb58d64a870a4cafad6e19b, type: 3}
+  - {fileID: 21300000, guid: 47cb1d37feec5a64e9cf4db9276f1b71, type: 3}
+  - {fileID: 21300000, guid: bfa8337932f6fae4dbae6bf668694193, type: 3}
+  - {fileID: 21300000, guid: 180b9f9412c2faf499dada9446b1e476, type: 3}
+  flyingBird: {fileID: 1248994710}
+--- !u!4 &1706325013
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706325011}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -17.65, y: -2.34, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1738555743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2404,6 +2860,56 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1825410528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1825410530}
+  - component: {fileID: 1825410529}
+  m_Layer: 0
+  m_Name: FlyingBirdGenerator (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1825410529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825410528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 788f09792147f1f42b28e6dd1a3b012a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  birdPics:
+  - {fileID: 21300000, guid: 558ef3462da5d9143ac5e988b4f0d859, type: 3}
+  - {fileID: 21300000, guid: 5c33d934ccb58d64a870a4cafad6e19b, type: 3}
+  - {fileID: 21300000, guid: 47cb1d37feec5a64e9cf4db9276f1b71, type: 3}
+  - {fileID: 21300000, guid: bfa8337932f6fae4dbae6bf668694193, type: 3}
+  - {fileID: 21300000, guid: 180b9f9412c2faf499dada9446b1e476, type: 3}
+  flyingBird: {fileID: 1248994710}
+--- !u!4 &1825410530
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825410528}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.59, y: 1.33, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1846525455 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7733013967565067334, guid: 5b3894aa8ef8ac14f81aaf1083ed085e,
@@ -2498,6 +3004,106 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1859366606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1859366608}
+  - component: {fileID: 1859366607}
+  m_Layer: 0
+  m_Name: FlyingBirdGenerator (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1859366607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859366606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 788f09792147f1f42b28e6dd1a3b012a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  birdPics:
+  - {fileID: 21300000, guid: 558ef3462da5d9143ac5e988b4f0d859, type: 3}
+  - {fileID: 21300000, guid: 5c33d934ccb58d64a870a4cafad6e19b, type: 3}
+  - {fileID: 21300000, guid: 47cb1d37feec5a64e9cf4db9276f1b71, type: 3}
+  - {fileID: 21300000, guid: bfa8337932f6fae4dbae6bf668694193, type: 3}
+  - {fileID: 21300000, guid: 180b9f9412c2faf499dada9446b1e476, type: 3}
+  flyingBird: {fileID: 1248994710}
+--- !u!4 &1859366608
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859366606}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.82, y: -5.53, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1925202095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1925202097}
+  - component: {fileID: 1925202096}
+  m_Layer: 0
+  m_Name: FlyingBirdGenerator (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1925202096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925202095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 788f09792147f1f42b28e6dd1a3b012a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  birdPics:
+  - {fileID: 21300000, guid: 558ef3462da5d9143ac5e988b4f0d859, type: 3}
+  - {fileID: 21300000, guid: 5c33d934ccb58d64a870a4cafad6e19b, type: 3}
+  - {fileID: 21300000, guid: 47cb1d37feec5a64e9cf4db9276f1b71, type: 3}
+  - {fileID: 21300000, guid: bfa8337932f6fae4dbae6bf668694193, type: 3}
+  - {fileID: 21300000, guid: 180b9f9412c2faf499dada9446b1e476, type: 3}
+  flyingBird: {fileID: 1248994710}
+--- !u!4 &1925202097
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925202095}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.56, y: -4.68, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2080870507
 GameObject:
   m_ObjectHideFlags: 0
@@ -2579,3 +3185,82 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &2197191702473196230
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2197191701564221264, guid: 6b93610ea0911c145b0484898c32efde,
+        type: 3}
+      propertyPath: m_Name
+      value: TitleFlyingBird
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197191701564221279, guid: 6b93610ea0911c145b0484898c32efde,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.1473
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197191701564221279, guid: 6b93610ea0911c145b0484898c32efde,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.3379
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197191701564221279, guid: 6b93610ea0911c145b0484898c32efde,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197191701564221279, guid: 6b93610ea0911c145b0484898c32efde,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197191701564221279, guid: 6b93610ea0911c145b0484898c32efde,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197191701564221279, guid: 6b93610ea0911c145b0484898c32efde,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197191701564221279, guid: 6b93610ea0911c145b0484898c32efde,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197191701564221279, guid: 6b93610ea0911c145b0484898c32efde,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197191701564221279, guid: 6b93610ea0911c145b0484898c32efde,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197191701564221279, guid: 6b93610ea0911c145b0484898c32efde,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197191701564221279, guid: 6b93610ea0911c145b0484898c32efde,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197191701564221279, guid: 6b93610ea0911c145b0484898c32efde,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3771
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197191701564221279, guid: 6b93610ea0911c145b0484898c32efde,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3449
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6b93610ea0911c145b0484898c32efde, type: 3}

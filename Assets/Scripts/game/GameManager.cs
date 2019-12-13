@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
             _audioSource.clip = levelBGM;
             _audioSource.Play();
             _audioSource.loop = true;
-            _atLevel = false;
+            _atLevel = true;
         }
     }
 
