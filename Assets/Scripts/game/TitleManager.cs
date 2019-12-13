@@ -45,4 +45,9 @@ public class TitleManager : MonoBehaviour
     {
         GameManager.Instance.GotoLevel(LevelManagerScript.Instance.level);
     }
+
+    public void Exit()
+    {
+        GameManager.Instance.Exit();
+    }
 }

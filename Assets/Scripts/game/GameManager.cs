@@ -105,4 +105,9 @@ public class GameManager : MonoBehaviour
         _level.Now=PlayerPrefs.GetInt("LevelNow",1);
     }
 
+    public void Exit()
+    {
+        Application.Quit();
+    }
+
 }

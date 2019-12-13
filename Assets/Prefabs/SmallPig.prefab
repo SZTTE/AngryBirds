@@ -67,7 +67,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 99d1d9f0976a52240b2f2d06d76216c9, type: 3}
   - {fileID: 8300000, guid: cafcb9a2d4c17df478c6e185934dc8e2, type: 3}
   settingLife: 50
-  myScorePic: {fileID: 0}
+  myScorePic: {fileID: -4980821355130699201, guid: bad0419d5085de84cbaf1971557bbf0a,
+    type: 3}
   myScore: 5000
 --- !u!212 &8369548457031911917
 SpriteRenderer:
