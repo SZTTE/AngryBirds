@@ -68,7 +68,6 @@ public class BlackBirdScript : Bird
     
     protected override void Update()
     {
-        Debug.Log("exploding = "+exploding);
         if (fired)
         {
             if(_rigidbody2D.velocity.magnitude>0.5f)_highSpeedLastTime = Time.time;

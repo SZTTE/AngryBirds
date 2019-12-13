@@ -279,7 +279,7 @@ public abstract class Block : Entity
     /// </summary>
     protected void InitializeValue()
     {
-        state.Full = allPics.Count;
+        state.Full = allPics.Count-1;
         state.Now = state.Full;
         life.Full = settingLife;
         life.Now = settingLife;

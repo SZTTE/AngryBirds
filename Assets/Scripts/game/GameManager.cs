@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     {
         _audioSource = GetComponent<AudioSource>();
         _audioListener = GetComponent<AudioListener>();
-        _level.Full = 5;
+        _level.Full = 24;
         _level.Now = 1;
         _mute = false;
         DontDestroyOnLoad(gameObject);
