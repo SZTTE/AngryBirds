@@ -727,7 +727,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 53.800003, y: 35}
+  m_AnchoredPosition: {x: 53.799988, y: 35}
   m_SizeDelta: {x: 73.47, y: 50.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &96751391
@@ -2768,8 +2768,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 29457702}
-        m_MethodName: GotoLevel
-        m_Mode: 3
+        m_MethodName: PlayBeginAnimation
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

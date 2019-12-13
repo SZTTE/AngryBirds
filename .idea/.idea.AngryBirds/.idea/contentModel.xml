@@ -35,7 +35,9 @@
             <e p="YellowBirdScript.cs" t="Include" />
           </e>
           <e p="ui" t="Include">
+            <e p="BeginAnimationScript.cs" t="Include" />
             <e p="Destroy.cs" t="Include" />
+            <e p="EndingAnimationScript.cs" t="Include" />
             <e p="FailureUIScript.cs" t="Include" />
             <e p="FlyingBirdGenerator.cs" t="Include" />
             <e p="LevelSelectSceneManager.cs" t="Include" />

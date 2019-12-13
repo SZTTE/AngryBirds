@@ -86,4 +86,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level24.unity
     guid: c47143eafa5bf354691b132df958e4d3
+  - enabled: 1
+    path: Assets/Scenes/BeginAnimation.unity
+    guid: cece0cce450fb0643a8854708c312dda
+  - enabled: 1
+    path: Assets/Scenes/EndingAnimation.unity
+    guid: c0fa2dacf5c6d524aa4ab16b1352494e
   m_configObjects: {}

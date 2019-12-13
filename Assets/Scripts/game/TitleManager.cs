@@ -50,4 +50,14 @@ public class TitleManager : MonoBehaviour
     {
         GameManager.Instance.Exit();
     }
+
+    public void PlayBeginAnimation()
+    {
+        GameManager.Instance.PlayBeginAnimation();
+    }
+
+    public void PlayEndingAnimation()
+    {
+        GameManager.Instance.PlayEndingAnimation();
+    }
 }

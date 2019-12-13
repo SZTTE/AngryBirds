@@ -110,4 +110,15 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
+    public void PlayBeginAnimation()
+    {
+        SceneManager.LoadScene("BeginAnimation");
+        _audioSource.Pause();
+    }
+
+    public void PlayEndingAnimation()
+    {
+        SceneManager.LoadScene("EndingAnimation");
+        _audioSource.Pause();
+    }
 }
