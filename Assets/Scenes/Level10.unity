@@ -1763,8 +1763,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -25.2, y: -13}
-  m_SizeDelta: {x: 1146.2, y: 657.5}
+  m_AnchoredPosition: {x: -97.3, y: -227.8}
+  m_SizeDelta: {x: 4638.8, y: 2804.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &414010906
 MonoBehaviour:
@@ -2480,8 +2480,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -61, y: 55.5}
-  m_SizeDelta: {x: 144.7, y: 54.4}
+  m_AnchoredPosition: {x: 33.1, y: 55.5}
+  m_SizeDelta: {x: 333, y: 54.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &675578798
 MonoBehaviour:
@@ -2503,10 +2503,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6d8bc9cc57de32748a0bc72ddc088607, type: 3}
-    m_FontSize: 43
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 4
     m_MaxSize: 43
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -2514,7 +2514,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5173\u5361 1"
+  m_Text: "\u5173\u536110 \u4F17\u8BAE\u9662"
 --- !u!222 &675578799
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4854,8 +4854,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -25.2, y: -13}
-  m_SizeDelta: {x: 1146.2, y: 657.5}
+  m_AnchoredPosition: {x: -8.5, y: -110.1}
+  m_SizeDelta: {x: 6083.6, y: 3453.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1246157464
 MonoBehaviour:
@@ -6086,8 +6086,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -89.1, y: 94.8}
-  m_SizeDelta: {x: 144.7, y: 54.4}
+  m_AnchoredPosition: {x: -15.6, y: 94.8}
+  m_SizeDelta: {x: 291.7, y: 54.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1547653296
 MonoBehaviour:
@@ -6120,7 +6120,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5173\u5361 1"
+  m_Text: "\u5173\u536110 \u4F17\u8BAE\u9662"
 --- !u!222 &1547653297
 CanvasRenderer:
   m_ObjectHideFlags: 0
