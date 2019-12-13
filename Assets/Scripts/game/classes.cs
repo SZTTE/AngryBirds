@@ -245,7 +245,9 @@ public abstract class Block : Entity
         if (life.Now <= 0) Disappear();
         state.Now = life.Now / (life.Full / state.Full) + 1;
         if (state.Now < 1) state.Now = 1;
-        _spriteRenderer.sprite = allPics[state.Now - 1];
+        Debug.Log(state.Now);
+        if (state.Now > state.Full) return;
+        _spriteRenderer.sprite = allPics[state.Now];
 
         LevelManagerScript.Instance.ScoreAdd(6*damage);
         

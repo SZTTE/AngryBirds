@@ -5443,7 +5443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score2Stars: 30000
-  score3Stars: 35000
+  score3Stars: 38000
   star:
   - {fileID: 2131042666}
   - {fileID: 2134388918}
@@ -6151,15 +6151,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2693324990194187386, guid: 7491cafd0ac864443a16ec681f96b83e,
-        type: 3}
-      propertyPath: m_Name
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 2693324990194187389, guid: 7491cafd0ac864443a16ec681f96b83e,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.012
+      objectReference: {fileID: 0}
+    - target: {fileID: 2693324990194187386, guid: 7491cafd0ac864443a16ec681f96b83e,
+        type: 3}
+      propertyPath: m_Name
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7491cafd0ac864443a16ec681f96b83e, type: 3}

@@ -34,7 +34,7 @@ public class EggScript : MonoBehaviour
         {
             Vector2 deltaPosition = other.transform.position - transform.position;
             Vector2 direction = deltaPosition / deltaPosition.magnitude;
-            other.GetComponent<Rigidbody2D>().AddForce(50f * (3f - deltaPosition.magnitude) * direction);
+            other.GetComponent<Rigidbody2D>().AddForce(50f * (3f - deltaPosition.magnitude)* (3f - deltaPosition.magnitude) * direction);
         }
     }
 }

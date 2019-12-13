@@ -11,8 +11,8 @@ public class GameManager : MonoBehaviour
     private bool _mute;
     public bool Mute => _mute;
 
-    private Tube _level;
-    public int[] highestScore = {0};
+    public Tube _level;
+    public int[] highestScore;
     public Tube Level { get=>_level; }
     private AudioSource _audioSource;
     private AudioListener _audioListener;

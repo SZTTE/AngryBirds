@@ -1345,6 +1345,11 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.8063359
       objectReference: {fileID: 0}
+    - target: {fileID: 3375791993224485206, guid: e17898869c15c764698e4ca8cb4190fd,
+        type: 3}
+      propertyPath: settingLife
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e17898869c15c764698e4ca8cb4190fd, type: 3}
 --- !u!1001 &319535081
@@ -4568,6 +4573,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mass
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3375791993224485206, guid: e17898869c15c764698e4ca8cb4190fd,
+        type: 3}
+      propertyPath: settingLife
+      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e17898869c15c764698e4ca8cb4190fd, type: 3}
