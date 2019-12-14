@@ -45,7 +45,7 @@ public class CameraScript : MonoBehaviour
         if (scroll!=0)
         {
             _targetSize = _camera.orthographicSize;
-            _targetSize -= scroll;
+            _targetSize -= scroll/10;
         }
         
         
