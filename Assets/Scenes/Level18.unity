@@ -2750,7 +2750,7 @@ PrefabInstance:
     - target: {fileID: 1864314551192864912, guid: 588a892bfc39f1144a8d90ba0c82ba65,
         type: 3}
       propertyPath: m_Mass
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 588a892bfc39f1144a8d90ba0c82ba65, type: 3}
@@ -3384,7 +3384,7 @@ PrefabInstance:
     - target: {fileID: 1864314551192864912, guid: 588a892bfc39f1144a8d90ba0c82ba65,
         type: 3}
       propertyPath: m_Mass
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 588a892bfc39f1144a8d90ba0c82ba65, type: 3}
@@ -5983,7 +5983,7 @@ PrefabInstance:
     - target: {fileID: 1864314551192864912, guid: 588a892bfc39f1144a8d90ba0c82ba65,
         type: 3}
       propertyPath: m_Mass
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 588a892bfc39f1144a8d90ba0c82ba65, type: 3}
@@ -9878,8 +9878,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd3913651fc36c44bdd7e963e1674da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score2Stars: 3000
-  score3Stars: 170000
+  score2Stars: 300000
+  score3Stars: 350000
   star:
   - {fileID: 2131042666}
   - {fileID: 2134388918}

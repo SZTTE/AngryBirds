@@ -6,7 +6,7 @@ public class RockBlock : Block
 {
     public RockBlock()
     {
-        BirdSensitivity.Black = 3f;
+        BirdSensitivity.Black = 5f;
         BirdSensitivity.White = 2f;
     }
     // Start is called before the first frame update

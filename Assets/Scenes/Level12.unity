@@ -5692,8 +5692,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd3913651fc36c44bdd7e963e1674da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score2Stars: 35000
-  score3Stars: 55000
+  score2Stars: 50000
+  score3Stars: 60000
   star:
   - {fileID: 2131042666}
   - {fileID: 2134388918}
@@ -6412,15 +6412,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3375791993224485206, guid: e17898869c15c764698e4ca8cb4190fd,
-        type: 3}
-      propertyPath: settingLife
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 3375791993224485209, guid: e17898869c15c764698e4ca8cb4190fd,
         type: 3}
       propertyPath: m_Mass
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3375791993224485206, guid: e17898869c15c764698e4ca8cb4190fd,
+        type: 3}
+      propertyPath: settingLife
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e17898869c15c764698e4ca8cb4190fd, type: 3}

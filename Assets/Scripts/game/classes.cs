@@ -223,6 +223,9 @@ public abstract class Block : Entity
                 Hurt((int) (point.normalImpulse*10*BirdSensitivity.White) );
                 other.rigidbody.AddForce(point.otherRigidbody.velocity.normalized * point.normalImpulse*10*(BirdSensitivity.White-1));
                 break;
+            default:
+                Hurt((int) (point.normalImpulse*5) );
+                break;
         }
     }
     protected new void InitializeReferences()//初始化对象引用
