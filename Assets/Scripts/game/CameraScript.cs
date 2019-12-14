@@ -18,13 +18,30 @@ public class CameraScript : MonoBehaviour
         _camera = GetComponent<Camera>();
         _collider = GetComponent<BoxCollider2D>();
         _targetSize = _camera.orthographicSize;
+        preTouchDistance = 0;
 
     }
 
     private float _targetSize;
+    private float scroll = 0;
+    private float preTouchDistance;
     void Update()
     {
-        float scroll = Input.mouseScrollDelta.y;//前一帧鼠标滚轮的滑动两
+        //以下是鼠标控制的版本
+        //float scroll = Input.mouseScrollDelta.y;//前一帧鼠标滚轮的滑动两
+
+        if (Input.touchCount == 2)
+        {
+            if(preTouchDistance==0) preTouchDistance = (Input.touches[0].position - Input.touches[1].position).magnitude;
+            float touchDistance = (Input.touches[0].position - Input.touches[1].position).magnitude;
+            scroll = touchDistance - preTouchDistance;
+            preTouchDistance = touchDistance;
+        }
+        else
+        {
+            preTouchDistance = 0;
+        }
+
         if (scroll!=0)
         {
             _targetSize = _camera.orthographicSize;
