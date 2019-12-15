@@ -41,7 +41,6 @@ public class GameManager : MonoBehaviour
         _mute = false;
         DontDestroyOnLoad(gameObject);
         _audioSource.clip = titleBGM;
-        _audioSource.Play();
         _atLevel = false;
         levelStars = new int[50];
         //最后再读档
@@ -133,5 +132,10 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("EndingAnimation");
         _audioSource.Pause();
+    }
+
+    public void MusicPlay()
+    {
+        _audioSource.Play();
     }
 }
