@@ -242,7 +242,7 @@ public abstract class Block : Entity
     }
     public void Hurt(int damage)
     {
-        if (damage <= 1) return;
+        if (damage <= 3) return;
         life.Now -= damage;
         if (life.Now <= 0) Disappear();
         state.Now = life.Now / (life.Full / state.Full) + 1;

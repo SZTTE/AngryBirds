@@ -87,7 +87,7 @@ public class CameraScript : MonoBehaviour
 
     void OnMouseDrag()
     {
-        if (Time.timeScale != 0)
+        if (Time.timeScale != 0 && Input.touchCount==1)
         {
             _nowPosition = Input.mousePosition;
             transform.position -= new Vector3(_nowPosition.x - _prePosition.x, 0, 0) * 0.01f;

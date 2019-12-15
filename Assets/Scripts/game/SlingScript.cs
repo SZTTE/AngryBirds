@@ -58,9 +58,10 @@ public class SlingScript : MonoBehaviour
 
     public IEnumerator ShowBirdsScore()
     {
-        _state = SlingState.End;
+        
         while (_state!=SlingState.OutOfBird && _birdNumber.Now <= _birdNumber.Full)
         {
+            _state = SlingState.End;
             birds[_birdNumber.Now].ShouMyScore();
             birds[_birdNumber.Now].JumpAndRoll();
             yield return new WaitForSeconds(1.8f);
