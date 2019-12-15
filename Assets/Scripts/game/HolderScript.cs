@@ -21,4 +21,9 @@ public class HolderScript : MonoBehaviour
     {
         draging = false;
     }
+
+    public void End()
+    {
+        GetComponent<Collider2D>().enabled = false;
+    }
 }

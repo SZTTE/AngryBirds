@@ -48,7 +48,7 @@ public class SlingScript : MonoBehaviour
         birds[_birdNumber.Now].transform.SetParent(holder.transform);
         birds[_birdNumber.Now].transform.eulerAngles = Vector3.zero;
         birds[_birdNumber.Now].Ani_OnSling();
-        Invoke("BirdPrepared",1);
+        Invoke("BirdPrepared",0.5f);
     }
 
     private void BirdPrepared()
@@ -58,6 +58,7 @@ public class SlingScript : MonoBehaviour
 
     public IEnumerator ShowBirdsScore()
     {
+        _state = SlingState.End;
         while (_state!=SlingState.OutOfBird && _birdNumber.Now <= _birdNumber.Full)
         {
             birds[_birdNumber.Now].ShouMyScore();
@@ -65,7 +66,7 @@ public class SlingScript : MonoBehaviour
             yield return new WaitForSeconds(1.8f);
             _birdNumber.Now++;
         }
-        _state = SlingState.End;
+        
         SettlementCanvasScript.Instance.Appear(LevelManagerScript.Instance.Score);
     }
 
@@ -180,7 +181,6 @@ public class SlingScript : MonoBehaviour
         }
         case SlingState.End:
         {
-            StopCoroutine(_reloadCor);
             break;
         }
         default:

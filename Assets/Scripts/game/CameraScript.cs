@@ -49,6 +49,10 @@ public class CameraScript : MonoBehaviour
                 {
                     _targetSize = _camera.orthographicSize;
                 }
+                else if (_camera.orthographicSize >= 41 && _targetSize>_camera.orthographicSize && LevelManagerScript.Instance.level==24)
+                {
+                    _targetSize = _camera.orthographicSize;
+                }
                 else if (_camera.orthographicSize < _targetSize-0.5f)
                 {
                     _camera.orthographicSize *= 1.01f;
