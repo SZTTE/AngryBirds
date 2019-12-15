@@ -3131,7 +3131,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draging: 0
   slingScript: {fileID: 0}
-  stretchSound: {fileID: 8300000, guid: 79718e8b10031ef4598f01c46d9dbff9, type: 3}
 --- !u!58 &818451763
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4951,6 +4950,7 @@ MonoBehaviour:
   lineBack: {fileID: 1069011164}
   lineForward: {fileID: 38007687}
   holderPicTransform: {fileID: 1330267649}
+  stretchSound: {fileID: 8300000, guid: 79718e8b10031ef4598f01c46d9dbff9, type: 3}
 --- !u!1001 &1222707455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6151,15 +6151,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2693324990194187386, guid: 7491cafd0ac864443a16ec681f96b83e,
-        type: 3}
-      propertyPath: m_Name
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 2693324990194187389, guid: 7491cafd0ac864443a16ec681f96b83e,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.012
+      objectReference: {fileID: 0}
+    - target: {fileID: 2693324990194187386, guid: 7491cafd0ac864443a16ec681f96b83e,
+        type: 3}
+      propertyPath: m_Name
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7491cafd0ac864443a16ec681f96b83e, type: 3}

@@ -3,7 +3,13 @@ guid: cf6438d46a2f9c24dbd15621ca5512fc
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - holder: {instanceID: 0}
+  - camera: {instanceID: 0}
+  - lineBack: {instanceID: 0}
+  - lineForward: {instanceID: 0}
+  - holderPicTransform: {instanceID: 0}
+  - stretchSound: {fileID: 8300000, guid: 79718e8b10031ef4598f01c46d9dbff9, type: 3}
   executionOrder: 300
   icon: {instanceID: 0}
   userData: 

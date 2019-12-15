@@ -5577,7 +5577,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draging: 0
   slingScript: {fileID: 0}
-  stretchSound: {fileID: 8300000, guid: 79718e8b10031ef4598f01c46d9dbff9, type: 3}
 --- !u!58 &818451763
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5591,9 +5590,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.018593788, y: 0}
+  m_Offset: {x: 0.07938576, y: 0}
   serializedVersion: 2
-  m_Radius: 0.30464697
+  m_Radius: 1.406919
 --- !u!4 &818451765
 Transform:
   m_ObjectHideFlags: 0
@@ -8759,6 +8758,7 @@ MonoBehaviour:
   lineBack: {fileID: 1069011164}
   lineForward: {fileID: 38007687}
   holderPicTransform: {fileID: 1330267649}
+  stretchSound: {fileID: 8300000, guid: 79718e8b10031ef4598f01c46d9dbff9, type: 3}
 --- !u!1 &1236462409
 GameObject:
   m_ObjectHideFlags: 0

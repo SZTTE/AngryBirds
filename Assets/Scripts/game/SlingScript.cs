@@ -27,6 +27,7 @@ public class SlingScript : MonoBehaviour
         get => _state;
     }
     private IEnumerator _reloadCor;
+    [SerializeField] private AudioClip stretchSound = null;
     SlingScript()
     {
         Instance = this;
@@ -46,8 +47,13 @@ public class SlingScript : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         birds[_birdNumber.Now].transform.SetParent(holder.transform);
         birds[_birdNumber.Now].transform.eulerAngles = Vector3.zero;
-        _state = SlingState.Release;
         birds[_birdNumber.Now].Ani_OnSling();
+        Invoke("BirdPrepared",1);
+    }
+
+    private void BirdPrepared()
+    {
+        _state = SlingState.Release;
     }
 
     public IEnumerator ShowBirdsScore()
@@ -118,7 +124,11 @@ public class SlingScript : MonoBehaviour
     void Update()
     {
         ////////////////////////////////////////////////////////////////////////////////////////////////////////拖拽控制
-        if (_state == SlingState.Release && holder.draging) _state = SlingState.Stretched;
+        if (_state == SlingState.Release && holder.draging)
+        {
+            _state = SlingState.Stretched;
+            AudioManager.Instance.Play(stretchSound, 1);
+        }
         if (_state == SlingState.Stretched && !holder.draging) _state = SlingState.Release;
         
         //线渲染器控制

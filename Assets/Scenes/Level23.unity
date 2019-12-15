@@ -3597,7 +3597,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draging: 0
   slingScript: {fileID: 0}
-  stretchSound: {fileID: 8300000, guid: 79718e8b10031ef4598f01c46d9dbff9, type: 3}
 --- !u!58 &818451763
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5824,6 +5823,7 @@ MonoBehaviour:
   lineBack: {fileID: 1069011164}
   lineForward: {fileID: 38007687}
   holderPicTransform: {fileID: 1330267649}
+  stretchSound: {fileID: 8300000, guid: 79718e8b10031ef4598f01c46d9dbff9, type: 3}
 --- !u!1 &1236462409
 GameObject:
   m_ObjectHideFlags: 0
@@ -7659,11 +7659,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8724353616158715591, guid: 5cea2926ff95c654883a1d3be13f12cd,
-        type: 3}
-      propertyPath: m_Name
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8724353616158715584, guid: 5cea2926ff95c654883a1d3be13f12cd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7673,6 +7668,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724353616158715591, guid: 5cea2926ff95c654883a1d3be13f12cd,
+        type: 3}
+      propertyPath: m_Name
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cea2926ff95c654883a1d3be13f12cd, type: 3}

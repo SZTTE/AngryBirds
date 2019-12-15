@@ -2531,7 +2531,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draging: 0
   slingScript: {fileID: 0}
-  stretchSound: {fileID: 8300000, guid: 79718e8b10031ef4598f01c46d9dbff9, type: 3}
 --- !u!58 &818451763
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3692,6 +3691,7 @@ MonoBehaviour:
   lineBack: {fileID: 1069011164}
   lineForward: {fileID: 38007687}
   holderPicTransform: {fileID: 1330267649}
+  stretchSound: {fileID: 8300000, guid: 79718e8b10031ef4598f01c46d9dbff9, type: 3}
 --- !u!1 &1236462409
 GameObject:
   m_ObjectHideFlags: 0

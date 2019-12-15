@@ -1355,6 +1355,7 @@ GameObject:
   - component: {fileID: 414010905}
   - component: {fileID: 414010907}
   - component: {fileID: 414010906}
+  - component: {fileID: 414010908}
   m_Layer: 5
   m_Name: CoverIMG
   m_TagString: Untagged
@@ -1417,6 +1418,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414010904}
   m_CullTransparentMesh: 0
+--- !u!61 &414010908
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414010904}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &447691731
 GameObject:
   m_ObjectHideFlags: 0
@@ -2524,7 +2551,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draging: 0
   slingScript: {fileID: 0}
-  stretchSound: {fileID: 8300000, guid: 79718e8b10031ef4598f01c46d9dbff9, type: 3}
 --- !u!58 &818451763
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3995,6 +4021,7 @@ MonoBehaviour:
   lineBack: {fileID: 1069011164}
   lineForward: {fileID: 38007687}
   holderPicTransform: {fileID: 1330267649}
+  stretchSound: {fileID: 8300000, guid: 79718e8b10031ef4598f01c46d9dbff9, type: 3}
 --- !u!1 &1236462409
 GameObject:
   m_ObjectHideFlags: 0
@@ -8409,15 +8436,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7733013967565067334, guid: 5b3894aa8ef8ac14f81aaf1083ed085e,
-        type: 3}
-      propertyPath: highestScore.Array.size
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 7733013967565067352, guid: 5b3894aa8ef8ac14f81aaf1083ed085e,
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733013967565067334, guid: 5b3894aa8ef8ac14f81aaf1083ed085e,
+        type: 3}
+      propertyPath: highestScore.Array.size
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b3894aa8ef8ac14f81aaf1083ed085e, type: 3}
