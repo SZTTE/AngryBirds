@@ -69,15 +69,17 @@ public class LevelManagerScript : MonoBehaviour
         
         if (!_settled)
         {
-            //Debug.Log(_lastTimeBlockMove+","+Time.time);
+            Debug.Log(_lastTimeBirdExist+","+Time.time);
             if (Time.time - _lastTimePigExist > 0.5f) //下面写胜利的代码
-                if(Time.time - _lastTimeBlockMove > 3 || Time.time - _lastTimePigExist > 10f)
+            {
+                if (Time.time - _lastTimeBlockMove > 3 || Time.time - _lastTimePigExist > 10f)
                 {
                     StartCoroutine(SlingScript.Instance.ShowBirdsScore());
                     _settled = true;
                     _audioSource.PlayOneShot(winSound);
                 }
-            else if (Time.time -_lastTimeBirdExist > 1f && Time.time - _lastTimeBlockMove > 3)//下面写失败的代码
+            }
+            else if (Time.time -_lastTimeBirdExist > 1f && Time.time - _lastTimeBlockMove > 1)//下面写失败的代码
             {
                 FailureUIScript.Instance.Appear();
                 _settled = true;

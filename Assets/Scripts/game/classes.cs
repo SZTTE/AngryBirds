@@ -199,7 +199,7 @@ public abstract class Block : Entity
     protected void OnCollisionEnter2D(Collision2D other)
     {
         ContactPoint2D point  = other.GetContact(0);
-        if(!_audioSource.isPlaying && _audioSource.enabled)    _audioSource.PlayOneShot(UsedCollisionSound,0.3f);
+        if(!_audioSource.isPlaying && _audioSource.enabled&&point.normalImpulse>0.5f)    _audioSource.PlayOneShot(UsedCollisionSound,0.3f);
         //Hurt((int) (point.normalImpulse*10) );
         switch (other.gameObject.tag)
         {
@@ -258,6 +258,7 @@ public abstract class Block : Entity
     private void ImStillMoving()
     {
         LevelManagerScript.Instance.BlockMove();
+        Debug.Log("Im"+gameObject);
     }
 
     public Block()
@@ -272,7 +273,7 @@ public abstract class Block : Entity
 
     private void Update()
     {
-        if (_rigidbody2D.velocity.magnitude >= 0.1f)
+        if (_rigidbody2D.velocity.magnitude >= 0.4f)
         {
             ImStillMoving();
         }
@@ -321,7 +322,7 @@ public abstract class Pig : Block
      protected new void OnCollisionEnter2D(Collision2D other)
      {
          ContactPoint2D point = other.GetContact(0);
-         if(!_audioSource.isPlaying)    _audioSource.PlayOneShot(UsedCollisionSound);
+         if(!_audioSource.isPlaying&&point.normalImpulse>0.5f)    _audioSource.PlayOneShot(UsedCollisionSound);
          Hurt((int) (point.normalImpulse*10) );
      }
 
