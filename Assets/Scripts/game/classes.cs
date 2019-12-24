@@ -273,7 +273,7 @@ public abstract class Block : Entity
 
     private void Update()
     {
-        if (_rigidbody2D.velocity.magnitude >= 0.4f)
+        if (_rigidbody2D.velocity.magnitude >= 0.1f)
         {
             ImStillMoving();
         }

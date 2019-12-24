@@ -558,7 +558,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -5
+  m_SortingOrder: 5
   m_Positions:
   - {x: -7.6496105, y: 2.6421158, z: 0}
   - {x: -8.49809, y: -1.1354321, z: 1}
@@ -1405,11 +1405,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3375791993224485206, guid: e17898869c15c764698e4ca8cb4190fd,
-        type: 3}
-      propertyPath: settingLife
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 3375791993224485209, guid: e17898869c15c764698e4ca8cb4190fd,
         type: 3}
       propertyPath: m_Mass
@@ -1429,6 +1424,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 0.8063359
+      objectReference: {fileID: 0}
+    - target: {fileID: 3375791993224485206, guid: e17898869c15c764698e4ca8cb4190fd,
+        type: 3}
+      propertyPath: settingLife
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e17898869c15c764698e4ca8cb4190fd, type: 3}
@@ -3949,7 +3949,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: -5
   m_Positions:
   - {x: -7.24006, y: 2.6336296, z: 0}
   - {x: -6.4571185, y: 2.4119294, z: 1}
@@ -4649,15 +4649,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3375791993224485206, guid: e17898869c15c764698e4ca8cb4190fd,
-        type: 3}
-      propertyPath: settingLife
-      value: 120
-      objectReference: {fileID: 0}
     - target: {fileID: 3375791993224485209, guid: e17898869c15c764698e4ca8cb4190fd,
         type: 3}
       propertyPath: m_Mass
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3375791993224485206, guid: e17898869c15c764698e4ca8cb4190fd,
+        type: 3}
+      propertyPath: settingLife
+      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e17898869c15c764698e4ca8cb4190fd, type: 3}
