@@ -69,7 +69,6 @@ public class LevelManagerScript : MonoBehaviour
         
         if (!_settled)
         {
-            Debug.Log(_lastTimeBirdExist+","+Time.time);
             if (Time.time - _lastTimePigExist > 0.5f) //下面写胜利的代码
             {
                 if (Time.time - _lastTimeBlockMove > 3 || Time.time - _lastTimePigExist > 10f)

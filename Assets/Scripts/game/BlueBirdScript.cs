@@ -17,7 +17,7 @@ public class BlueBirdScript : Bird
 
     public void BeAClone()
     {
-        Debug.Log(_animator);
+
         /*_animator.SetTrigger("clone");
         _trailRenderer.enabled = true;*/
     }

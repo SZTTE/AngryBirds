@@ -4688,7 +4688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score2Stars: 20000
-  score3Stars: 30000
+  score3Stars: 25000
   star:
   - {fileID: 2131042666}
   - {fileID: 2134388918}

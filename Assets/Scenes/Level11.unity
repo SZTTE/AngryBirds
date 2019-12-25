@@ -2069,11 +2069,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1.0156
       objectReference: {fileID: 0}
-    - target: {fileID: 6860947281982085557, guid: f4d1c1b32bd48134ca30f604cdd66c19,
-        type: 3}
-      propertyPath: m_UsedByComposite
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4041349975361252684, guid: f4d1c1b32bd48134ca30f604cdd66c19,
         type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.size
@@ -2379,6 +2374,11 @@ PrefabInstance:
       propertyPath: m_ColliderPaths.Array.data[1].m_Collider
       value: 
       objectReference: {fileID: 717780860}
+    - target: {fileID: 6860947281982085557, guid: f4d1c1b32bd48134ca30f604cdd66c19,
+        type: 3}
+      propertyPath: m_UsedByComposite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4d1c1b32bd48134ca30f604cdd66c19, type: 3}
 --- !u!1 &409310292
@@ -3375,11 +3375,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1.0156
       objectReference: {fileID: 0}
-    - target: {fileID: 6860947281982085557, guid: f4d1c1b32bd48134ca30f604cdd66c19,
-        type: 3}
-      propertyPath: m_UsedByComposite
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4041349975361252684, guid: f4d1c1b32bd48134ca30f604cdd66c19,
         type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.size
@@ -3685,6 +3680,11 @@ PrefabInstance:
       propertyPath: m_ColliderPaths.Array.data[1].m_Collider
       value: 
       objectReference: {fileID: 543493341}
+    - target: {fileID: 6860947281982085557, guid: f4d1c1b32bd48134ca30f604cdd66c19,
+        type: 3}
+      propertyPath: m_UsedByComposite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4d1c1b32bd48134ca30f604cdd66c19, type: 3}
 --- !u!1001 &628842165
@@ -4544,7 +4544,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   draging: 0
   slingScript: {fileID: 0}
-  stretchSound: {fileID: 8300000, guid: 79718e8b10031ef4598f01c46d9dbff9, type: 3}
 --- !u!58 &818451763
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6224,6 +6223,7 @@ MonoBehaviour:
   lineBack: {fileID: 1069011164}
   lineForward: {fileID: 38007687}
   holderPicTransform: {fileID: 1330267649}
+  stretchSound: {fileID: 0}
 --- !u!1 &1236462409
 GameObject:
   m_ObjectHideFlags: 0
@@ -6635,8 +6635,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd3913651fc36c44bdd7e963e1674da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score2Stars: 800000
-  score3Stars: 120000
+  score2Stars: 70000
+  score3Stars: 85000
   star:
   - {fileID: 2131042666}
   - {fileID: 2134388918}

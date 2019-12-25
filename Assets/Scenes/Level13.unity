@@ -1048,11 +1048,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5383013798274439990, guid: f4d1c1b32bd48134ca30f604cdd66c19,
-        type: 3}
-      propertyPath: m_Mass
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 4041349975361252684, guid: f4d1c1b32bd48134ca30f604cdd66c19,
         type: 3}
       propertyPath: m_ColliderPaths.Array.size
@@ -1152,6 +1147,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.data[2].y
       value: 0.4099942
+      objectReference: {fileID: 0}
+    - target: {fileID: 5383013798274439990, guid: f4d1c1b32bd48134ca30f604cdd66c19,
+        type: 3}
+      propertyPath: m_Mass
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4d1c1b32bd48134ca30f604cdd66c19, type: 3}
@@ -5376,8 +5376,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd3913651fc36c44bdd7e963e1674da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score2Stars: 70000
-  score3Stars: 80000
+  score2Stars: 40000
+  score3Stars: 50000
   star:
   - {fileID: 2131042666}
   - {fileID: 2134388918}

@@ -16,7 +16,6 @@ public class Stars : MonoBehaviour
     void Start()
     {
         AllStars[level] = this;
-        Debug.Log(GameManager.Instance.levelStars);
         switch (GameManager.Instance.levelStars[level])
         {
             case 0:
